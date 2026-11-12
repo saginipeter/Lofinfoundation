@@ -155,7 +155,7 @@ white text, so the warning reads as a warning and gold is not spent twice.
 **No em dashes in website copy.** 51 removed from the content file, pages, components, `const.ts`,
 `useAuth.ts` and `client/index.html`. Replacements are commas, colons, full stops or "to", so copy
 reads like desk-written prose; document titles now use a pipe separator, for example
-"About us | LOFIN Foundation". `grep -o "—" dist/public` returns zero. The requirements brief and
+"About us | LOFIN Foundation". a search for the character across `dist/public` returns zero hits. The requirements brief and
 the CEO email draft were also swept: the PDF text layer contains no em dashes.
 
 **Other results of this round.** `client/public/favicon.svg` and the `theme-color` meta recoloured to
