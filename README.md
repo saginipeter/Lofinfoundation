@@ -1,4 +1,4 @@
-# LOFIN Foundation — website
+# LOFIN Foundation website
 
 Marketing website for **LOFIN Foundation**, a Kenyan foundation. Built as a fast static site with
 React and Vite: no database, no server-side code, no accounts.
@@ -81,7 +81,7 @@ Specifications to aim for when real photography arrives:
 
 Alt text is written from the caption for every meaningful image; decorative images are marked as
 such. `scripts/fetch-images.mjs` is the one-off helper that pulled generated imagery into this
-folder; it is not needed once real photographs exist — drop them in and update `IMAGES`.
+folder; it is not needed once real photographs exist. Drop them in and update `IMAGES`.
 
 ## Kenyan framing
 

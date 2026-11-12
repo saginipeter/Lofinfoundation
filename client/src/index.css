@@ -5,69 +5,76 @@
 
 /*
  * LOFIN Foundation design tokens.
+ * Deep navy is the brand colour and the page ground: every section sits on it.
  * Rebrand = edit this block only. Every component consumes these variables.
  */
 :root {
-  /* Brand palette — reference: grantmaking foundation editorial style */
-  --bone: #f7f4ee; /* page background, warm paper */
-  --bone-deep: #efe9df; /* alternating section band */
-  --spruce: #123b3f; /* primary ink-blue-green: headers, scrims, buttons */
-  --spruce-deep: #0a2427; /* footer, hero overlay, quote band */
-  --sage: #4d7268; /* secondary, category tags */
-  --terracotta: #c2562f; /* signature accent: donate, links, rules */
-  --terracotta-deep: #a8451f; /* accessible fill behind uppercase button labels */
-  --gold: #d9a441; /* highlight, ticks, small marks */
+  /* Brand palette: deep navy, one warm signal, gold marks */
+  --navy: #0a1f3c; /* primary brand colour, page background */
+  --navy-raise: #102a4d; /* alternating section band, lifted one step */
+  --navy-deep: #06152b; /* footer, hero scrim, quote and method bands */
+  --panel: #0e2646; /* card, table and form surface */
+  --paper: #edf3fa; /* text, rules and reversed button fills */
+  --ink: #071a33; /* dark text where paper or gold is the fill */
+  --terracotta: #e4794a; /* signature accent: links, labels, rules */
+  --terracotta-deep: #c4551f; /* accessible fill behind uppercase button labels */
+  --gold: #e8b656; /* highlight, ticks, small marks, giving ribbon */
+  --sage: #8fb6de; /* secondary tone for roles and tags */
 
-  --foreground: #14282b;
-  --background: var(--bone);
-  --card: #fffdf9;
+  --foreground: #e9f1fb;
+  --background: var(--navy);
+  --card: var(--panel);
   --card-foreground: var(--foreground);
-  --popover: #fffdf9;
+  --popover: var(--panel);
   --popover-foreground: var(--foreground);
-  --primary: var(--spruce);
-  --primary-foreground: var(--bone);
-  --secondary: var(--bone-deep);
-  --secondary-foreground: var(--spruce);
-  --muted: #e9e3d8;
-  --muted-foreground: #5c6f6d;
+  --primary: var(--terracotta-deep);
+  --primary-foreground: #fff7f2;
+  --secondary: var(--navy-raise);
+  --secondary-foreground: var(--paper);
+  --muted: #13315c;
+  --muted-foreground: #a9c0da;
   --accent: var(--terracotta);
-  --accent-foreground: #fff8f3;
-  --destructive: #a83232;
+  --accent-foreground: var(--ink);
+  --destructive: #e5645c;
   --destructive-foreground: #fff5f5;
-  --border: #ddd5c6;
-  --input: #cfc6b6;
-  --ring: rgba(194, 86, 47, 0.45);
+  --border: rgba(233, 241, 251, 0.17);
+  --input: rgba(233, 241, 251, 0.28);
+  --ring: rgba(232, 182, 86, 0.55);
 
-  --chart-1: var(--spruce);
+  --chart-1: var(--navy-raise);
   --chart-2: var(--sage);
   --chart-3: var(--terracotta);
   --chart-4: var(--gold);
-  --chart-5: #8aa6a0;
+  --chart-5: #6f8fb8;
 
   --radius: 0.25rem;
 
-  --shadow-soft: 0 18px 40px -24px rgba(10, 36, 39, 0.45);
-  --shadow-lift: 0 26px 60px -28px rgba(10, 36, 39, 0.55);
+  --shadow-soft: 0 18px 40px -24px rgba(3, 12, 24, 0.75);
+  --shadow-lift: 0 26px 60px -28px rgba(3, 12, 24, 0.85);
 }
 
+/*
+ * The site is navy by design, so the dark branch deliberately mirrors :root.
+ * Keeping it identical means a system dark preference cannot half-retheme it.
+ */
 .dark {
-  --background: var(--spruce-deep);
-  --foreground: #e7e2d7;
-  --card: #0f2f32;
-  --card-foreground: #e7e2d7;
-  --popover: #0f2f32;
-  --popover-foreground: #e7e2d7;
-  --primary: var(--gold);
-  --primary-foreground: var(--spruce-deep);
-  --secondary: #14383c;
-  --secondary-foreground: #e7e2d7;
-  --muted: #14383c;
-  --muted-foreground: #9db2af;
+  --foreground: #e9f1fb;
+  --background: var(--navy);
+  --card: var(--panel);
+  --card-foreground: var(--foreground);
+  --popover: var(--panel);
+  --popover-foreground: var(--foreground);
+  --primary: var(--terracotta-deep);
+  --primary-foreground: #fff7f2;
+  --secondary: var(--navy-raise);
+  --secondary-foreground: var(--paper);
+  --muted: #13315c;
+  --muted-foreground: #a9c0da;
   --accent: var(--terracotta);
-  --accent-foreground: #fff8f3;
-  --border: rgba(231, 226, 215, 0.16);
-  --input: rgba(231, 226, 215, 0.24);
-  --ring: rgba(217, 164, 65, 0.5);
+  --accent-foreground: var(--ink);
+  --border: rgba(233, 241, 251, 0.17);
+  --input: rgba(233, 241, 251, 0.28);
+  --ring: rgba(232, 182, 86, 0.55);
 }
 
 @theme inline {
@@ -101,15 +108,17 @@
   --color-chart-4: var(--chart-4);
   --color-chart-5: var(--chart-5);
 
-  /* Brand aliases usable as bg-spruce, text-terracotta, etc. */
-  --color-bone: var(--bone);
-  --color-bone-deep: var(--bone-deep);
-  --color-spruce: var(--spruce);
-  --color-spruce-deep: var(--spruce-deep);
-  --color-sage: var(--sage);
+  /* Brand aliases usable as bg-navy, text-paper, border-terracotta, and so on */
+  --color-navy: var(--navy);
+  --color-navy-raise: var(--navy-raise);
+  --color-navy-deep: var(--navy-deep);
+  --color-panel: var(--panel);
+  --color-paper: var(--paper);
+  --color-ink: var(--ink);
   --color-terracotta: var(--terracotta);
   --color-terracotta-deep: var(--terracotta-deep);
   --color-gold: var(--gold);
+  --color-sage: var(--sage);
 
   --font-display: "Fraunces", "Iowan Old Style", Georgia, serif;
   --font-sans: "Public Sans", "Helvetica Neue", Arial, sans-serif;
@@ -165,8 +174,15 @@
   }
 
   ::selection {
-    background: var(--terracotta);
-    color: #fff8f3;
+    background: var(--gold);
+    color: var(--ink);
+  }
+
+  /* Form controls read better light-on-navy than the browser default */
+  input,
+  select,
+  textarea {
+    color-scheme: dark;
   }
 }
 
@@ -203,7 +219,7 @@
     text-transform: uppercase;
   }
 
-  /* Walton-style hairline rule flanking a centered heading */
+  /* Hairline rule flanking a centered heading */
   .rule-heading {
     display: flex;
     align-items: center;
@@ -220,7 +236,7 @@
 
   .rule-heading-light::before,
   .rule-heading-light::after {
-    background: rgba(247, 244, 238, 0.28);
+    background: rgba(237, 243, 250, 0.28);
   }
 
   /* Scroll reveal; class toggled by the Reveal component */

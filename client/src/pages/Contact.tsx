@@ -68,13 +68,13 @@ export default function Contact() {
 
   const inputClass = (invalid?: string) =>
     cn(
-      "mt-2 w-full border bg-bone px-4 py-3 text-[0.9375rem] outline-none transition-colors",
-      invalid ? "border-destructive" : "border-border focus:border-spruce",
+      "mt-2 w-full border bg-navy px-4 py-3 text-[0.9375rem] outline-none transition-colors",
+      invalid ? "border-destructive" : "border-border focus:border-paper",
     );
 
   return (
     <SitePage>
-      <section className="bg-bone">
+      <section className="bg-navy">
         <div className="container grid gap-14 py-16 lg:grid-cols-[1fr_1.25fr] lg:py-20">
           {/* Details */}
           <Reveal>
@@ -88,10 +88,10 @@ export default function Contact() {
 
             <div className="mt-10 space-y-7 border-t border-border pt-8">
               <div>
-                <h2 className="text-[0.7rem] font-bold uppercase tracking-[0.2em] text-spruce/60">
+                <h2 className="text-[0.7rem] font-bold uppercase tracking-[0.2em] text-paper/60">
                   Office
                 </h2>
-                <address className="mt-3 not-italic text-[1.0625rem] leading-relaxed text-spruce">
+                <address className="mt-3 not-italic text-[1.0625rem] leading-relaxed text-paper">
                   {contact.address.map((line) => (
                     <span key={line} className="block">
                       {line}
@@ -102,38 +102,38 @@ export default function Contact() {
 
               <div className="grid gap-7 sm:grid-cols-2">
                 <div>
-                  <h2 className="text-[0.7rem] font-bold uppercase tracking-[0.2em] text-spruce/60">
+                  <h2 className="text-[0.7rem] font-bold uppercase tracking-[0.2em] text-paper/60">
                     Email
                   </h2>
                   <a
                     href={`mailto:${contact.email}`}
-                    className="link-underline mt-3 inline-block text-[1.0625rem] text-spruce hover:text-terracotta"
+                    className="link-underline mt-3 inline-block text-[1.0625rem] text-paper hover:text-terracotta"
                   >
                     {contact.email}
                   </a>
                 </div>
                 <div>
-                  <h2 className="text-[0.7rem] font-bold uppercase tracking-[0.2em] text-spruce/60">
+                  <h2 className="text-[0.7rem] font-bold uppercase tracking-[0.2em] text-paper/60">
                     Telephone
                   </h2>
-                  <p className="mt-3 text-[1.0625rem] text-spruce">{contact.phone}</p>
+                  <p className="mt-3 text-[1.0625rem] text-paper">{contact.phone}</p>
                 </div>
               </div>
 
               <div>
-                <h2 className="text-[0.7rem] font-bold uppercase tracking-[0.2em] text-spruce/60">
+                <h2 className="text-[0.7rem] font-bold uppercase tracking-[0.2em] text-paper/60">
                   Office hours
                 </h2>
-                <p className="mt-3 text-[1.0625rem] text-spruce">{contact.hours}</p>
+                <p className="mt-3 text-[1.0625rem] text-paper">{contact.hours}</p>
               </div>
 
               <PlaceholderNote>Address, phone and email unconfirmed</PlaceholderNote>
 
               <div className="border border-border bg-card p-6">
-                <p className="text-[0.9375rem] font-medium text-spruce">{org.registrationNote}</p>
-                <p className="mt-2 text-[0.875rem] leading-relaxed text-spruce/75">
+                <p className="text-[0.9375rem] font-medium text-paper">{org.registrationNote}</p>
+                <p className="mt-2 text-[0.875rem] leading-relaxed text-paper/75">
                   Add the registered number, the governing document and the complaints procedure
-                  here — most regulators expect them reachable from the contact page.
+                  here. Most regulators expect them reachable from the contact page.
                 </p>
               </div>
             </div>
@@ -148,7 +148,7 @@ export default function Contact() {
               className="border border-border bg-card p-7 shadow-[var(--shadow-soft)] sm:p-9"
             >
               <h2 className="font-display text-[1.6rem] leading-snug">Send an enquiry</h2>
-              <p className="mt-3 text-[0.9375rem] leading-relaxed text-spruce/75">
+              <p className="mt-3 text-[0.9375rem] leading-relaxed text-paper/75">
                 Five fields, one paragraph. We read everything.
               </p>
 
@@ -157,7 +157,7 @@ export default function Contact() {
                   <div>
                     <label
                       htmlFor="name"
-                      className="text-[0.75rem] font-bold uppercase tracking-[0.16em] text-spruce/70"
+                      className="text-[0.75rem] font-bold uppercase tracking-[0.16em] text-paper/70"
                     >
                       Your name <span aria-hidden>*</span>
                       <span className="sr-only">(required)</span>
@@ -181,7 +181,7 @@ export default function Contact() {
                   <div>
                     <label
                       htmlFor="organisation"
-                      className="text-[0.75rem] font-bold uppercase tracking-[0.16em] text-spruce/70"
+                      className="text-[0.75rem] font-bold uppercase tracking-[0.16em] text-paper/70"
                     >
                       Organisation
                     </label>
@@ -198,7 +198,7 @@ export default function Contact() {
                 <div>
                   <label
                     htmlFor="email"
-                    className="text-[0.75rem] font-bold uppercase tracking-[0.16em] text-spruce/70"
+                    className="text-[0.75rem] font-bold uppercase tracking-[0.16em] text-paper/70"
                   >
                     Email <span aria-hidden>*</span>
                     <span className="sr-only">(required)</span>
@@ -224,7 +224,7 @@ export default function Contact() {
                 <div>
                   <label
                     htmlFor="topic"
-                    className="text-[0.75rem] font-bold uppercase tracking-[0.16em] text-spruce/70"
+                    className="text-[0.75rem] font-bold uppercase tracking-[0.16em] text-paper/70"
                   >
                     What is this about?
                   </label>
@@ -245,7 +245,7 @@ export default function Contact() {
                 <div>
                   <label
                     htmlFor="message"
-                    className="text-[0.75rem] font-bold uppercase tracking-[0.16em] text-spruce/70"
+                    className="text-[0.75rem] font-bold uppercase tracking-[0.16em] text-paper/70"
                   >
                     The place and the problem <span aria-hidden>*</span>
                     <span className="sr-only">(required)</span>
@@ -268,7 +268,7 @@ export default function Contact() {
                   )}
                 </div>
 
-                <label className="flex items-start gap-3 text-[0.875rem] leading-relaxed text-spruce/80">
+                <label className="flex items-start gap-3 text-[0.875rem] leading-relaxed text-paper/80">
                   <input
                     type="checkbox"
                     checked={values.consent}
@@ -278,7 +278,7 @@ export default function Contact() {
                   <span>
                     I am happy for {org.name} to keep this message on file while replying.
                     <span className="mt-1 block text-[0.8125rem] text-muted-foreground">
-                      Consent text is a placeholder — write the real privacy notice before launch.
+                      Consent text is a placeholder. Write the real privacy notice before launch.
                     </span>
                   </span>
                 </label>
@@ -287,25 +287,25 @@ export default function Contact() {
               <div className="mt-8 flex flex-wrap items-center gap-4">
                 <button
                   type="submit"
-                  className="bg-terracotta-deep px-7 py-3.5 text-[0.75rem] font-bold uppercase tracking-[0.18em] text-white transition-colors hover:bg-spruce"
+                  className="bg-terracotta-deep px-7 py-3.5 text-[0.75rem] font-bold uppercase tracking-[0.18em] text-white transition-colors hover:bg-terracotta"
                 >
                   Send enquiry
                 </button>
                 <p className="text-[0.8125rem] text-muted-foreground">
-                  Front-end only in this draft — nothing is sent or stored.
+                  Front-end only in this draft: nothing is sent or stored.
                 </p>
               </div>
 
               <div id="form-status" role="status" aria-live="polite">
                 {sent && (
-                  <div className="mt-6 border border-sage/50 bg-sage/10 p-5 text-[0.9375rem] leading-relaxed text-spruce">
+                  <div className="mt-6 border border-sage/50 bg-sage/10 p-5 text-[0.9375rem] leading-relaxed text-paper">
                     <p className="font-bold">Message composed, not sent.</p>
-                    <p className="mt-2 text-spruce/85">
+                    <p className="mt-2 text-paper/85">
                       When the site goes live this form needs a backend: connect it to email or a
                       database record, add spam protection, and confirm which lawful basis you are
                       relying on for storing enquiries.
                     </p>
-                    <p className="mt-2 text-spruce/85">
+                    <p className="mt-2 text-paper/85">
                       Draft summary: <span className="font-medium">{values.topic}</span> from{" "}
                       <span className="font-medium">{values.name}</span> ({values.email})
                       {values.organisation ? ` of ${values.organisation}` : ""}.
@@ -328,7 +328,7 @@ export default function Contact() {
       </section>
 
       {/* FAQ */}
-      <section id="faq" className="scroll-mt-24 border-t border-border bg-bone-deep">
+      <section id="faq" className="scroll-mt-24 border-t border-border bg-navy-raise">
         <div className="container py-20">
           <Eyebrow>Questions we actually get</Eyebrow>
           <h2 className="mt-4 max-w-3xl text-3xl sm:text-4xl">Answers, before you ask twice</h2>
@@ -336,9 +336,9 @@ export default function Contact() {
             {impactFaq.map((faq, index) => (
               <div key={faq.q}>
                 <Reveal delay={index * 70}>
-                  <div className="border-t-2 border-spruce pt-5">
+                  <div className="border-t-2 border-paper pt-5">
                     <dt className="text-[1.125rem] leading-snug">{faq.q}</dt>
-                    <dd className="mt-3 text-[0.9375rem] leading-relaxed text-spruce/80">
+                    <dd className="mt-3 text-[0.9375rem] leading-relaxed text-paper/80">
                       {faq.a}
                     </dd>
                   </div>

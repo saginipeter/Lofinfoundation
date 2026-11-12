@@ -37,7 +37,7 @@ function PersonCard({ person, index }: { person: Person; index: number }) {
       <div className="flex items-center gap-4">
         <span
           aria-hidden
-          className="flex size-16 shrink-0 items-center justify-center rounded-full bg-spruce font-display text-lg text-bone transition-colors group-hover:bg-terracotta-deep"
+          className="flex size-16 shrink-0 items-center justify-center rounded-full bg-navy-deep font-display text-lg text-gold ring-1 ring-border transition-colors group-hover:bg-terracotta-deep group-hover:text-white"
         >
           {monogram(person, index)}
         </span>
@@ -48,7 +48,7 @@ function PersonCard({ person, index }: { person: Person; index: number }) {
           </p>
         </div>
       </div>
-      <p className="mt-4 text-[0.9375rem] leading-relaxed text-spruce/85">{person.bio}</p>
+      <p className="mt-4 text-[0.9375rem] leading-relaxed text-paper/85">{person.bio}</p>
     </article>
   );
 }
@@ -72,14 +72,14 @@ export default function About() {
         </div>
       </PageBanner>
 
-      <section aria-labelledby="pillars-heading" className="bg-bone">
+      <section aria-labelledby="pillars-heading" className="bg-navy">
         <h2 id="pillars-heading" className="sr-only">
           Purpose, vision and approach
         </h2>
         <div className="container grid gap-10 py-20 md:grid-cols-3 lg:gap-14">
           {pillars.map((item, index) => (
             <Reveal key={item.label} delay={index * 90}>
-              <div className="border-t-2 border-spruce pt-6">
+              <div className="border-t-2 border-paper pt-6">
                 <Eyebrow>{item.label}</Eyebrow>
                 <p className="mt-4 font-display text-[1.35rem] leading-snug">{item.text}</p>
               </div>
@@ -88,7 +88,7 @@ export default function About() {
         </div>
       </section>
 
-      <section className="border-y border-border bg-bone-deep">
+      <section className="border-y border-border bg-navy-raise">
         <div className="container grid gap-12 py-20 lg:grid-cols-[1.1fr_1fr] lg:items-center">
           <Reveal>
             <Eyebrow>Our story</Eyebrow>
@@ -107,7 +107,7 @@ export default function About() {
               </p>
             </Prose>
           </Reveal>
-          <Reveal delay={120} className="overflow-hidden bg-spruce-deep">
+          <Reveal delay={120} className="overflow-hidden bg-navy-deep">
             <img
               src={IMAGES.aboutValues}
               alt="Kenyan growers potting tree seedlings in a community nursery"
@@ -118,7 +118,7 @@ export default function About() {
         </div>
       </section>
 
-      <section aria-labelledby="values-heading" className="bg-bone">
+      <section aria-labelledby="values-heading" className="bg-navy">
         <div className="container py-20">
           <SectionHeading id="values-heading">What we believe</SectionHeading>
           <ul className="mt-14 grid list-none gap-6 p-0 sm:grid-cols-2 lg:grid-cols-4">
@@ -128,7 +128,7 @@ export default function About() {
                   <div className="flex h-full flex-col border border-border bg-card p-6">
                     <span className="font-display text-2xl text-terracotta">0{index + 1}</span>
                     <h3 className="mt-4 text-lg leading-snug">{value.title}</h3>
-                    <p className="mt-3 text-[0.9375rem] leading-relaxed text-spruce/85">
+                    <p className="mt-3 text-[0.9375rem] leading-relaxed text-paper/85">
                       {value.body}
                     </p>
                   </div>
@@ -140,12 +140,12 @@ export default function About() {
       </section>
 
       {/* History */}
-      <section aria-labelledby="history-heading" className="border-t border-border bg-spruce-deep text-bone">
+      <section aria-labelledby="history-heading" className="border-t border-border bg-navy-deep text-paper">
         <div className="container py-20">
           <div className="flex flex-col items-start justify-between gap-4 sm:flex-row sm:items-end">
             <div>
               <Eyebrow className="text-gold">History</Eyebrow>
-              <h2 id="history-heading" className="mt-3 text-3xl text-bone sm:text-4xl">
+              <h2 id="history-heading" className="mt-3 text-3xl text-paper sm:text-4xl">
                 From {org.foundedYear} to now
               </h2>
             </div>
@@ -159,11 +159,11 @@ export default function About() {
                   <span aria-hidden className="absolute left-0 top-2 size-2 rounded-full bg-gold" />
                   <span
                     aria-hidden
-                    className="absolute left-[3.5px] top-5 h-[calc(100%-0.5rem)] w-px bg-bone/20"
+                    className="absolute left-[3.5px] top-5 h-[calc(100%-0.5rem)] w-px bg-paper/20"
                   />
-                  <p className="font-display text-[2rem] leading-none text-bone">{milestone.year}</p>
+                  <p className="font-display text-[2rem] leading-none text-paper">{milestone.year}</p>
                   <h3 className="mt-3 text-[1.0625rem] text-gold">{milestone.title}</h3>
-                  <p className="mt-2 text-[0.9375rem] leading-relaxed text-bone/80">
+                  <p className="mt-2 text-[0.9375rem] leading-relaxed text-paper/80">
                     {milestone.body}
                   </p>
                 </Reveal>
@@ -174,10 +174,10 @@ export default function About() {
       </section>
 
       {/* Leadership and governance */}
-      <section id="leadership" className="scroll-mt-24 bg-bone">
+      <section id="leadership" className="scroll-mt-24 bg-navy">
         <div className="container py-20">
           <SectionHeading id="people-heading">People &amp; governance</SectionHeading>
-          <p className="mx-auto mt-5 max-w-2xl text-center text-[1.0625rem] leading-relaxed text-spruce/80">
+          <p className="mx-auto mt-5 max-w-2xl text-center text-[1.0625rem] leading-relaxed text-paper/80">
             Monogram avatars are used deliberately. Once you send photographs and real names, they
             drop straight into the content file.
           </p>
@@ -189,7 +189,7 @@ export default function About() {
               return (
                 <div key={group}>
                   <div className="flex items-baseline justify-between gap-4 border-b border-border pb-3">
-                    <h3 className="text-[0.8125rem] font-bold uppercase tracking-[0.18em] text-spruce">
+                    <h3 className="text-[0.8125rem] font-bold uppercase tracking-[0.18em] text-paper">
                       {group}
                     </h3>
                     <p className="text-[0.75rem] uppercase tracking-[0.12em] text-muted-foreground">
@@ -213,7 +213,7 @@ export default function About() {
           {/* Financials */}
           <div className="mt-16 border border-border bg-card p-7 sm:p-9">
             <div className="flex flex-wrap items-center justify-between gap-3">
-              <h3 className="text-[0.8125rem] font-bold uppercase tracking-[0.18em] text-spruce">
+              <h3 className="text-[0.8125rem] font-bold uppercase tracking-[0.18em] text-paper">
                 Finances at a glance
               </h3>
               <PlaceholderNote>{financials.note}</PlaceholderNote>
@@ -225,10 +225,10 @@ export default function About() {
               <tbody>
                 {financials.rows.map((row) => (
                   <tr key={row.label} className="border-t border-border">
-                    <th scope="row" className="py-4 pr-4 font-medium text-spruce">
+                    <th scope="row" className="py-4 pr-4 font-medium text-paper">
                       {row.label}
                     </th>
-                    <td className="py-4 pr-4 text-right font-display text-[1.35rem] leading-none text-spruce">
+                    <td className="py-4 pr-4 text-right font-display text-[1.35rem] leading-none text-paper">
                       {row.value}
                     </td>
                     <td className="hidden py-4 text-[0.875rem] text-muted-foreground sm:table-cell">
@@ -250,7 +250,7 @@ export default function About() {
                       Document
                     </p>
                     <h3 className="mt-3 font-display text-lg">{doc.title}</h3>
-                    <p className="mt-2 text-[0.9375rem] leading-relaxed text-spruce/85">{doc.body}</p>
+                    <p className="mt-2 text-[0.9375rem] leading-relaxed text-paper/85">{doc.body}</p>
                   </div>
                 </Reveal>
               </li>

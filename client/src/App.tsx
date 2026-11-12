@@ -82,7 +82,7 @@ function Router() {
 
 /**
  * LOFIN Foundation
- * Light bone ground, deep spruce ink, terracotta accent.
+ * Deep navy ground and brand colour, paper text, terracotta and gold signals.
  * Palette and type tokens live in index.css; all copy and figures live in content/site.ts.
  */
 function App() {

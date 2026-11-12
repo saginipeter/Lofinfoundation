@@ -32,7 +32,7 @@ export default function Impact() {
         alt="A Kenyan smallholder farmer kneeling in onion rows in the highlands"
       />
 
-      <section aria-labelledby="totals-heading" className="bg-bone">
+      <section aria-labelledby="totals-heading" className="bg-navy">
         <div className="container py-20">
           <div className="flex flex-col items-start justify-between gap-4 sm:flex-row sm:items-end">
             <div>
@@ -41,7 +41,7 @@ export default function Impact() {
                 Totals since the first grant
               </h2>
             </div>
-            <PlaceholderNote>Illustrative data — not real</PlaceholderNote>
+            <PlaceholderNote>Illustrative data, not real</PlaceholderNote>
           </div>
           <div className="mt-12 grid gap-8 sm:grid-cols-2 lg:grid-cols-4">
             {impactStats.map((stat, index) => (
@@ -54,7 +54,7 @@ export default function Impact() {
       </section>
 
       {/* Allocation */}
-      <section aria-labelledby="allocation-heading" className="border-y border-border bg-bone-deep">
+      <section aria-labelledby="allocation-heading" className="border-y border-border bg-navy-raise">
         <div className="container grid gap-14 py-20 lg:grid-cols-[1fr_1.15fr]">
           <Reveal>
             <Eyebrow>Where the money went</Eyebrow>
@@ -82,13 +82,13 @@ export default function Impact() {
                 <div key={item.slug}>
                   <div className="flex items-baseline justify-between gap-4">
                     <h3 className="text-[1.0625rem]">{program?.name ?? item.slug}</h3>
-                    <span className="font-display text-xl tabular-nums text-spruce">
+                    <span className="font-display text-xl tabular-nums text-paper">
                       {item.share}%
                     </span>
                   </div>
-                  <div className="mt-3 h-2.5 w-full overflow-hidden bg-bone">
+                  <div className="mt-3 h-2.5 w-full overflow-hidden bg-navy">
                     <div
-                      className="h-full bg-spruce transition-[width] duration-1000"
+                      className="h-full bg-gold transition-[width] duration-1000"
                       style={{ width: `${item.share}%` }}
                     />
                   </div>
@@ -101,7 +101,7 @@ export default function Impact() {
       </section>
 
       {/* Outcomes against baseline */}
-      <section aria-labelledby="outcomes-heading" className="bg-bone">
+      <section aria-labelledby="outcomes-heading" className="bg-navy">
         <div className="container py-20">
           <SectionHeading align="left" id="outcomes-heading">
             Outcomes against baseline
@@ -111,14 +111,14 @@ export default function Impact() {
               Placeholder outcome indicators with baseline and latest values
             </caption>
             <thead>
-              <tr className="border-b border-border bg-bone-deep">
-                <th scope="col" className="px-6 py-4 text-[0.7rem] font-bold uppercase tracking-[0.18em] text-spruce">
+              <tr className="border-b border-border bg-navy-raise">
+                <th scope="col" className="px-6 py-4 text-[0.7rem] font-bold uppercase tracking-[0.18em] text-paper">
                   Indicator
                 </th>
-                <th scope="col" className="px-6 py-4 text-right text-[0.7rem] font-bold uppercase tracking-[0.18em] text-spruce">
+                <th scope="col" className="px-6 py-4 text-right text-[0.7rem] font-bold uppercase tracking-[0.18em] text-paper">
                   Baseline
                 </th>
-                <th scope="col" className="px-6 py-4 text-right text-[0.7rem] font-bold uppercase tracking-[0.18em] text-spruce">
+                <th scope="col" className="px-6 py-4 text-right text-[0.7rem] font-bold uppercase tracking-[0.18em] text-paper">
                   Latest
                 </th>
               </tr>
@@ -127,10 +127,10 @@ export default function Impact() {
               {outcomes.map((outcome) => (
                 <tr key={outcome.title} className="border-b border-border last:border-0">
                   <th scope="row" className="px-6 py-6 text-left align-top font-normal">
-                    <span className="block text-[1.0625rem] leading-snug text-spruce">
+                    <span className="block text-[1.0625rem] leading-snug text-paper">
                       {outcome.title}
                     </span>
-                    <span className="mt-2 block text-[0.875rem] leading-relaxed text-spruce/70">
+                    <span className="mt-2 block text-[0.875rem] leading-relaxed text-paper/70">
                       {outcome.detail}
                     </span>
                   </th>
@@ -152,10 +152,10 @@ export default function Impact() {
       </section>
 
       {/* Method */}
-      <section aria-labelledby="method-heading" className="border-t border-border bg-spruce-deep text-bone">
+      <section aria-labelledby="method-heading" className="border-t border-border bg-navy-deep text-paper">
         <div className="container py-20">
           <Eyebrow className="text-gold">Method &amp; transparency</Eyebrow>
-          <h2 id="method-heading" className="mt-4 max-w-3xl text-3xl text-bone sm:text-4xl">
+          <h2 id="method-heading" className="mt-4 max-w-3xl text-3xl text-paper sm:text-4xl">
             A number without a method is decoration
           </h2>
           <ul className="mt-12 grid list-none gap-8 p-0 md:grid-cols-3">
@@ -163,8 +163,8 @@ export default function Impact() {
               <li key={method.title}>
                 <Reveal delay={index * 90}>
                   <div className="border-t-2 border-gold pt-5">
-                    <h3 className="text-[1.125rem] leading-snug text-bone">{method.title}</h3>
-                    <p className="mt-3 text-[0.9375rem] leading-relaxed text-bone/75">
+                    <h3 className="text-[1.125rem] leading-snug text-paper">{method.title}</h3>
+                    <p className="mt-3 text-[0.9375rem] leading-relaxed text-paper/75">
                       {method.body}
                     </p>
                   </div>

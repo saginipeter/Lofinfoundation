@@ -27,7 +27,7 @@ export default function NotFound() {
   }, []);
 
   useEffect(() => {
-    document.title = "Page not found — LOFIN Foundation";
+    document.title = "Page not found | LOFIN Foundation";
   }, []);
 
   return (
@@ -35,14 +35,14 @@ export default function NotFound() {
       <DraftRibbon />
       <SkipLink />
       <Header />
-      <main id="main" className="flex-1 bg-bone">
+      <main id="main" className="flex-1 bg-navy">
         <div className="container flex flex-col items-start gap-8 py-24 lg:grid lg:grid-cols-[1.1fr_1fr] lg:items-center">
           <div>
             <Eyebrow>Error 404</Eyebrow>
             <h1 className="mt-4 text-[2.5rem] leading-[1.05] sm:text-[3.5rem]">
               That page has moved, or was never written
             </h1>
-            <p className="mt-6 max-w-xl text-[1.0625rem] leading-relaxed text-spruce/80">
+            <p className="mt-6 max-w-xl text-[1.0625rem] leading-relaxed text-paper/80">
               The story, programme or report you asked for is not in this draft. Try the index of
               stories, or send us the link you expected to work and we will fix it.
             </p>
@@ -57,14 +57,14 @@ export default function NotFound() {
             <button
               type="button"
               onClick={() => setLocation("/")}
-              className="link-underline mt-8 text-[0.8125rem] uppercase tracking-[0.16em] text-muted-foreground hover:text-spruce"
+              className="link-underline mt-8 text-[0.8125rem] uppercase tracking-[0.16em] text-muted-foreground hover:text-paper"
             >
               Return home
             </button>
           </div>
 
           <div className="border border-border bg-card p-8">
-            <h2 className="text-[0.75rem] font-semibold uppercase tracking-[0.2em] text-spruce">
+            <h2 className="text-[0.75rem] font-semibold uppercase tracking-[0.2em] text-paper">
               Popular destinations
             </h2>
             <ul className="mt-5 space-y-4">

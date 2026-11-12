@@ -38,13 +38,13 @@ export default function Home() {
     <SitePage>
       {/* One h1 per page; the hero carries the organisation's positioning. */}
       <h1 className="sr-only">
-        LOFIN Foundation — {mission.heading}
+        LOFIN Foundation. {mission.heading}
       </h1>
 
       <HeroCarousel slides={heroSlides} />
 
       {/* Mission */}
-      <section aria-labelledby="mission-heading" className="bg-bone">
+      <section aria-labelledby="mission-heading" className="bg-navy">
         <div className="container grid items-center gap-12 py-20 lg:grid-cols-[1.05fr_1fr] lg:py-28">
           <Reveal>
             <Eyebrow>{mission.eyebrow}</Eyebrow>
@@ -67,7 +67,7 @@ export default function Home() {
           </Reveal>
 
           <Reveal delay={120} className="relative">
-            <div className="overflow-hidden bg-spruce-deep">
+            <div className="overflow-hidden bg-navy-deep">
               <img
                 src={mission.image}
                 alt={mission.imageAlt}
@@ -79,7 +79,7 @@ export default function Home() {
               <p className="font-display text-3xl leading-none text-terracotta">
                 {programs.length}
               </p>
-              <p className="mt-2 text-[0.8125rem] leading-snug text-spruce/85">
+              <p className="mt-2 text-[0.8125rem] leading-snug text-paper/85">
                 programme areas, one defined geography
               </p>
             </div>
@@ -88,10 +88,10 @@ export default function Home() {
       </section>
 
       {/* Programs */}
-      <section aria-labelledby="programs-heading" className="border-y border-border bg-bone-deep">
+      <section aria-labelledby="programs-heading" className="border-y border-border bg-navy-raise">
         <div className="container py-20 lg:py-24">
           <SectionHeading id="programs-heading">Our Work</SectionHeading>
-          <p className="mx-auto mt-5 max-w-2xl text-center text-[1.0625rem] leading-relaxed text-spruce/80">
+          <p className="mx-auto mt-5 max-w-2xl text-center text-[1.0625rem] leading-relaxed text-paper/80">
             Four programme areas, chosen because a small patient grant in each one changes what a
             community can do for itself.
           </p>
@@ -108,7 +108,7 @@ export default function Home() {
       </section>
 
       {/* Impact band */}
-      <section aria-labelledby="investment-heading" className="bg-bone">
+      <section aria-labelledby="investment-heading" className="bg-navy">
         <div className="container py-20 lg:py-24">
           <div className="flex flex-col items-start justify-between gap-5 sm:flex-row sm:items-end">
             <div>
@@ -117,7 +117,7 @@ export default function Home() {
                 Investment to date
               </h2>
             </div>
-            <PlaceholderNote>Illustrative figures — replace with your own data</PlaceholderNote>
+            <PlaceholderNote>Illustrative figures. Replace with your own data</PlaceholderNote>
           </div>
           <div className="mt-12 grid gap-8 sm:grid-cols-2 lg:grid-cols-4">
             {impactStats.map((stat, index) => (
@@ -135,7 +135,7 @@ export default function Home() {
       </section>
 
       {/* Recent stories: one feature left, compact rows right (reference layout) */}
-      <section aria-labelledby="stories-heading" className="border-y border-border bg-bone-deep">
+      <section aria-labelledby="stories-heading" className="border-y border-border bg-navy-raise">
         <div className="container py-20 lg:py-24">
           <SectionHeading id="stories-heading">Recent Stories</SectionHeading>
           <div className="mt-14 grid gap-12 lg:grid-cols-[1.15fr_1fr] lg:gap-16">
@@ -148,7 +148,7 @@ export default function Home() {
               ))}
               <Link
                 href="/stories"
-                className="mt-8 inline-flex items-center gap-2 border-b border-spruce/30 pb-1 text-[0.75rem] font-bold uppercase tracking-[0.14em] text-spruce hover:border-terracotta hover:text-terracotta"
+                className="mt-8 inline-flex items-center gap-2 border-b border-paper/30 pb-1 text-[0.75rem] font-bold uppercase tracking-[0.14em] text-paper hover:border-terracotta hover:text-terracotta"
               >
                 All stories
               </Link>
@@ -164,9 +164,9 @@ export default function Home() {
       />
 
       {/* Flagship initiative strip */}
-      <section aria-labelledby="flagship-heading" className="bg-bone">
+      <section aria-labelledby="flagship-heading" className="bg-navy">
         <div className="container grid gap-10 py-20 lg:grid-cols-[1fr_1.1fr] lg:items-center">
-          <Reveal className="order-2 overflow-hidden bg-spruce-deep lg:order-1">
+          <Reveal className="order-2 overflow-hidden bg-navy-deep lg:order-1">
             <img
               src={flagship.image}
               alt={flagship.alt}

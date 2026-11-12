@@ -1,12 +1,13 @@
 <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="640" height="360" viewBox="0 0 640 360">
-  <rect width="640" height="360" rx="28" fill="#123B3F"/>
+  <rect width="640" height="360" rx="28" fill="#0A1F3C"/>
   <g transform="translate(56,110)">
-    <circle cx="70" cy="70" r="66" fill="none" stroke="#F7F4EE" stroke-width="3" opacity="0.5"/>
-    <path d="M24 89 C37 63, 56 50, 81 50 C98 50, 112 56, 123 68" fill="none" stroke="#F7F4EE" stroke-width="7" stroke-linecap="round"/>
-    <path d="M40 105 C52 87, 66 78, 83 78 C95 78, 105 82, 114 91" fill="none" stroke="#F7F4EE" stroke-width="5" stroke-linecap="round" opacity="0.7"/>
-    <circle cx="109" cy="42" r="12" fill="#C2562F"/>
+    <circle cx="70" cy="70" r="66" fill="none" stroke="#EDF3FA" stroke-width="3" opacity="0.5"/>
+    <path d="M24 89 C37 63, 56 50, 81 50 C98 50, 112 56, 123 68" fill="none" stroke="#EDF3FA" stroke-width="7" stroke-linecap="round"/>
+    <path d="M40 105 C52 87, 66 78, 83 78 C95 78, 105 82, 114 91" fill="none" stroke="#EDF3FA" stroke-width="5" stroke-linecap="round" opacity="0.7"/>
+    <circle cx="109" cy="42" r="12" fill="#E4794A"/>
+    <path d="M46 122 C60 112, 78 108, 96 110" fill="none" stroke="#E8B656" stroke-width="4" stroke-linecap="round" opacity="0.9"/>
   </g>
-  <g fill="#F7F4EE" font-family="Georgia, 'Times New Roman', serif">
+  <g fill="#EDF3FA" font-family="Georgia, 'Times New Roman', serif">
     <text x="228" y="178" font-size="76" letter-spacing="14">LOFIN</text>
     <text x="230" y="232" font-size="34" letter-spacing="12" opacity="0.8">FOUNDATION</text>
   </g>

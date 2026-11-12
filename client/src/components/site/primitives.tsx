@@ -170,8 +170,8 @@ export function SectionHeading({
 }) {
   if (align === "left") {
     return (
-      <div className={cn("border-t pt-4", tone === "dark" ? "border-border" : "border-bone/25", className)}>
-        <h2 id={id} className={cn("text-3xl sm:text-4xl", tone === "light" && "text-bone")}>
+      <div className={cn("border-t pt-4", tone === "dark" ? "border-border" : "border-paper/25", className)}>
+        <h2 id={id} className={cn("text-3xl sm:text-4xl", tone === "light" && "text-paper")}>
           {children}
         </h2>
       </div>
@@ -179,7 +179,7 @@ export function SectionHeading({
   }
   return (
     <div className={cn("rule-heading", tone === "light" && "rule-heading-light", className)}>
-      <h2 id={id} className={cn("text-center text-3xl sm:text-[2.5rem]", tone === "light" && "text-bone")}>
+      <h2 id={id} className={cn("text-center text-3xl sm:text-[2.5rem]", tone === "light" && "text-paper")}>
         {children}
       </h2>
     </div>
@@ -206,10 +206,10 @@ export function EditorialButton({
 
   const classes = cn(
     "group inline-flex items-center gap-2 px-6 py-3 text-[0.75rem] font-bold uppercase tracking-[0.16em] transition-colors",
-    tone === "light" && "border border-bone/70 text-bone hover:bg-bone hover:text-spruce-deep",
-    tone === "solid" && "bg-terracotta-deep text-white hover:bg-spruce",
+    tone === "light" && "border border-paper/70 text-paper hover:bg-paper hover:text-navy",
+    tone === "solid" && "bg-terracotta-deep text-white hover:bg-terracotta",
     tone === "outline" &&
-      "border border-spruce/40 text-spruce hover:border-spruce hover:bg-spruce hover:text-bone",
+      "border border-paper/25 text-paper hover:border-gold hover:text-gold",
     className,
   );
 
@@ -264,7 +264,7 @@ export function Tag({ children, className }: { children: ReactNode; className?: 
 /** Small honest marker so stakeholders can tell sample content from real content. */
 export function PlaceholderNote({ children }: { children: ReactNode }) {
   return (
-    <span className="inline-flex items-center gap-2 border border-dashed border-gold/80 bg-gold/12 px-3 py-1.5 text-[0.6875rem] font-semibold uppercase tracking-[0.12em] text-spruce">
+    <span className="inline-flex items-center gap-2 border border-dashed border-gold/80 bg-gold/12 px-3 py-1.5 text-[0.6875rem] font-semibold uppercase tracking-[0.12em] text-paper">
       <span className="size-1.5 rounded-full bg-gold" aria-hidden />
       {children}
     </span>
@@ -273,7 +273,7 @@ export function PlaceholderNote({ children }: { children: ReactNode }) {
 
 export function Prose({ children, className }: { children: ReactNode; className?: string }) {
   return (
-    <div className={cn("space-y-5 text-[1.0625rem] leading-[1.75] text-spruce/90", className)}>
+    <div className={cn("space-y-5 text-[1.0625rem] leading-[1.75] text-paper/90", className)}>
       {children}
     </div>
   );
@@ -288,7 +288,7 @@ export function SkipLink() {
         event.preventDefault();
         scrollToId("main");
       }}
-      className="sr-only focus:not-sr-only focus:fixed focus:left-4 focus:top-4 focus:z-[60] focus:bg-spruce focus:px-5 focus:py-3 focus:text-[0.75rem] focus:font-bold focus:uppercase focus:tracking-[0.16em] focus:text-bone"
+      className="sr-only focus:not-sr-only focus:fixed focus:left-4 focus:top-4 focus:z-[60] focus:bg-terracotta-deep focus:px-5 focus:py-3 focus:text-[0.75rem] focus:font-bold focus:uppercase focus:tracking-[0.16em] focus:text-paper"
     >
       Skip to content
     </a>

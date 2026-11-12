@@ -22,7 +22,7 @@ export default function ProgramDetail() {
     program ? `/our-work/${program.slug}` : "/our-work",
     program
       ? {
-          title: `${program.name} — Our Work — LOFIN Foundation`,
+          title: `${program.name} | Our Work | LOFIN Foundation`,
           description: program.summary,
         }
       : undefined,
@@ -42,7 +42,7 @@ export default function ProgramDetail() {
         alt={program.alt}
       />
 
-      <section className="bg-bone">
+      <section className="bg-navy">
         <div className="container grid gap-12 py-20 lg:grid-cols-[1.2fr_1fr]">
           <Reveal>
             <Eyebrow>The change we are buying</Eyebrow>
@@ -60,7 +60,7 @@ export default function ProgramDetail() {
                   <span className="font-display text-2xl text-terracotta">0{index + 1}</span>
                   <div>
                     <h2 className="text-[1.1875rem] leading-snug">{item.title}</h2>
-                    <p className="mt-2 text-[0.9375rem] leading-relaxed text-spruce/85">
+                    <p className="mt-2 text-[0.9375rem] leading-relaxed text-paper/85">
                       {item.body}
                     </p>
                   </div>
@@ -72,8 +72,8 @@ export default function ProgramDetail() {
           <Reveal delay={120} className="space-y-10">
             <div className="grid grid-cols-2 gap-6">
               {program.figures.map((figure) => (
-                <div key={figure.label} className="border-t-2 border-spruce pt-4">
-                  <p className="font-display text-[2.25rem] leading-none text-spruce">
+                <div key={figure.label} className="border-t-2 border-paper pt-4">
+                  <p className="font-display text-[2.25rem] leading-none text-paper">
                     {figure.value}
                   </p>
                   <p className="mt-2 text-[0.8125rem] uppercase tracking-[0.12em] text-muted-foreground">
@@ -85,7 +85,7 @@ export default function ProgramDetail() {
 
             <div className="border border-border bg-card p-6">
               <div className="flex items-center justify-between gap-3">
-                <h2 className="text-[0.75rem] font-bold uppercase tracking-[0.18em] text-spruce">
+                <h2 className="text-[0.75rem] font-bold uppercase tracking-[0.18em] text-paper">
                   Sample grants
                 </h2>
                 <PlaceholderNote>Placeholder amounts</PlaceholderNote>
@@ -94,7 +94,7 @@ export default function ProgramDetail() {
                 {program.grants.map((grant) => (
                   <li key={grant.recipient} className="border-t border-border pt-5 first:border-0 first:pt-0">
                     <p className="font-display text-[1.0625rem] leading-snug">{grant.recipient}</p>
-                    <p className="mt-1.5 text-[0.9375rem] leading-relaxed text-spruce/85">
+                    <p className="mt-1.5 text-[0.9375rem] leading-relaxed text-paper/85">
                       {grant.purpose}
                     </p>
                     <p className="mt-2 text-[0.8125rem] font-bold tracking-wide text-terracotta">
@@ -105,11 +105,11 @@ export default function ProgramDetail() {
               </ul>
             </div>
 
-            <div className="bg-bone-deep p-6">
-              <h2 className="text-[0.75rem] font-bold uppercase tracking-[0.18em] text-spruce">
+            <div className="bg-navy-raise p-6">
+              <h2 className="text-[0.75rem] font-bold uppercase tracking-[0.18em] text-paper">
                 Apply or ask
               </h2>
-              <p className="mt-3 text-[0.9375rem] leading-relaxed text-spruce/85">
+              <p className="mt-3 text-[0.9375rem] leading-relaxed text-paper/85">
                 We read every enquiry in writing before asking for a proposal. Tell us the problem
                 and the place.
               </p>
@@ -127,13 +127,13 @@ export default function ProgramDetail() {
       </section>
 
       {story && (
-        <section className="border-t border-border bg-bone-deep">
+        <section className="border-t border-border bg-navy-raise">
           <div className="container py-20">
             <div className="flex flex-wrap items-end justify-between gap-4">
               <Eyebrow>From this programme</Eyebrow>
               <Link
                 href="/stories"
-                className="text-[0.75rem] font-bold uppercase tracking-[0.14em] text-spruce hover:text-terracotta"
+                className="text-[0.75rem] font-bold uppercase tracking-[0.14em] text-paper hover:text-terracotta"
               >
                 All stories
               </Link>

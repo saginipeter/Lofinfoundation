@@ -42,7 +42,7 @@ export default function DonatePage() {
   return (
     <SitePage>
       {/* No banner here: the page keeps the eye on the ask. */}
-      <section className="bg-bone">
+      <section className="bg-navy">
         <div className="container grid gap-14 py-16 lg:grid-cols-[1.15fr_1fr] lg:py-20">
           <Reveal>
             <Eyebrow>Donate</Eyebrow>
@@ -56,9 +56,9 @@ export default function DonatePage() {
             </Prose>
 
             <div className="mt-8 space-y-4">
-              <PlaceholderNote>Preview only — no payment provider is linked</PlaceholderNote>
-              <div className="border border-dashed border-terracotta/60 bg-terracotta/5 p-5">
-                <p className="text-[0.9375rem] leading-relaxed text-spruce">
+              <PlaceholderNote>Preview only. No payment provider is linked</PlaceholderNote>
+              <div className="border border-dashed border-terracotta/50 bg-terracotta/10 p-5">
+                <p className="text-[0.9375rem] leading-relaxed text-paper">
                   <span className="font-bold">What happens next, when this goes live: </span>
                   {donate.liveNote}
                 </p>
@@ -66,7 +66,7 @@ export default function DonatePage() {
             </div>
 
             <div className="mt-10 border-t border-border pt-8">
-              <h2 className="text-[0.75rem] font-bold uppercase tracking-[0.2em] text-spruce">
+              <h2 className="text-[0.75rem] font-bold uppercase tracking-[0.2em] text-paper">
                 What a regular gift buys
               </h2>
               <ul className="mt-5 space-y-4">
@@ -78,7 +78,7 @@ export default function DonatePage() {
                     <span className="font-display text-[1.0625rem] leading-snug text-terracotta">
                       {money(Number(item.amount))}
                     </span>
-                    <span className="text-[0.9375rem] leading-relaxed text-spruce/85">
+                    <span className="text-[0.9375rem] leading-relaxed text-paper/85">
                       {item.body}
                     </span>
                   </li>
@@ -89,10 +89,10 @@ export default function DonatePage() {
             <div className="mt-10 grid gap-5 sm:grid-cols-2">
               {[donate.paybill, donate.bank].map((instruction) => (
                 <div key={instruction.title} className="border border-border bg-card p-5">
-                  <h2 className="text-[0.7rem] font-bold uppercase tracking-[0.18em] text-spruce">
+                  <h2 className="text-[0.7rem] font-bold uppercase tracking-[0.18em] text-paper">
                     {instruction.title}
                   </h2>
-                  <ol className="mt-3 space-y-2 text-[0.875rem] leading-relaxed text-spruce/85">
+                  <ol className="mt-3 space-y-2 text-[0.875rem] leading-relaxed text-paper/85">
                     {instruction.lines.map((line, index) => (
                       <li key={line.slice(0, 20)} className="flex gap-3">
                         <span className="font-display text-terracotta" aria-hidden>
@@ -117,7 +117,7 @@ export default function DonatePage() {
               <h2 className="font-display text-[1.5rem] leading-snug">Choose your gift</h2>
 
               <div
-                className="mt-6 grid grid-cols-2 gap-1 border border-border bg-bone p-1"
+                className="mt-6 grid grid-cols-2 gap-1 border border-border bg-navy p-1"
                 role="group"
                 aria-label="Giving frequency"
               >
@@ -130,8 +130,8 @@ export default function DonatePage() {
                     className={cn(
                       "px-4 py-2.5 text-[0.75rem] font-bold uppercase tracking-[0.16em] transition-colors",
                       frequency === option
-                        ? "bg-spruce text-bone"
-                        : "text-spruce/70 hover:text-spruce",
+                        ? "bg-paper text-navy"
+                        : "text-paper/70 hover:text-paper",
                     )}
                   >
                     {option === "monthly" ? "Monthly" : "One-time"}
@@ -140,7 +140,7 @@ export default function DonatePage() {
               </div>
 
               <fieldset className="mt-5 border-0 p-0">
-                <legend className="text-[0.75rem] font-bold uppercase tracking-[0.16em] text-spruce/70">
+                <legend className="text-[0.75rem] font-bold uppercase tracking-[0.16em] text-paper/70">
                   Amount ({currency.symbol})
                 </legend>
                 <div className="mt-2 grid grid-cols-4 gap-2">
@@ -163,7 +163,7 @@ export default function DonatePage() {
                           "border py-3 font-display text-[1.0625rem] transition-colors",
                           active
                             ? "border-terracotta-deep bg-terracotta-deep text-white"
-                            : "border-border bg-bone text-spruce hover:border-spruce",
+                            : "border-border bg-navy text-paper hover:border-paper",
                         )}
                       >
                         {preset.toLocaleString("en-KE")}
@@ -176,12 +176,12 @@ export default function DonatePage() {
               <div className="mt-4">
                 <label
                   htmlFor="custom-amount"
-                  className="text-[0.75rem] font-bold uppercase tracking-[0.16em] text-spruce/70"
+                  className="text-[0.75rem] font-bold uppercase tracking-[0.16em] text-paper/70"
                 >
                   Or enter another amount
                 </label>
-                <div className="mt-2 flex items-center border border-border bg-bone focus-within:border-spruce">
-                  <span className="pl-4 font-display text-[0.9375rem] text-spruce/60" aria-hidden>
+                <div className="mt-2 flex items-center border border-border bg-navy focus-within:border-paper">
+                  <span className="pl-4 font-display text-[0.9375rem] text-paper/60" aria-hidden>
                     {currency.symbol}
                   </span>
                   <input
@@ -207,7 +207,7 @@ export default function DonatePage() {
               <div className="mt-5">
                 <label
                   htmlFor="designation"
-                  className="text-[0.75rem] font-bold uppercase tracking-[0.16em] text-spruce/70"
+                  className="text-[0.75rem] font-bold uppercase tracking-[0.16em] text-paper/70"
                 >
                   Direct my gift to
                 </label>
@@ -215,7 +215,7 @@ export default function DonatePage() {
                   id="designation"
                   value={designated}
                   onChange={(event) => setDesignated(event.target.value)}
-                  className="mt-2 w-full border border-border bg-bone px-4 py-3 text-[0.9375rem] outline-none focus:border-spruce"
+                  className="mt-2 w-full border border-border bg-navy px-4 py-3 text-[0.9375rem] outline-none focus:border-paper"
                 >
                   <option value="where-needed">Where needed most</option>
                   {programs.map((program) => (
@@ -232,12 +232,12 @@ export default function DonatePage() {
                 className={cn(
                   "mt-7 w-full px-6 py-4 text-[0.75rem] font-bold uppercase tracking-[0.18em] transition-colors",
                   validAmount
-                    ? "bg-terracotta-deep text-white hover:bg-spruce"
+                    ? "bg-terracotta-deep text-white hover:bg-terracotta"
                     : "cursor-not-allowed bg-muted text-muted-foreground",
                 )}
               >
                 {submitted
-                  ? "Preview only — nothing was charged"
+                  ? "Preview only. Nothing was charged"
                   : `Give ${money(validAmount ? effectiveAmount : 0)}${
                       frequency === "monthly" ? " / month" : ""
                     }`}
@@ -252,7 +252,7 @@ export default function DonatePage() {
               {submitted && (
                 <div
                   role="status"
-                  className="mt-4 border border-gold/70 bg-gold/10 p-4 text-[0.875rem] leading-relaxed text-spruce"
+                  className="mt-4 border border-gold/70 bg-gold/10 p-4 text-[0.875rem] leading-relaxed text-paper"
                 >
                   This is where checkout would open: an M-Pesa STK push asking the phone number you
                   give us to confirm the gift, or a card form for donors outside Kenya. Neither is
@@ -268,7 +268,7 @@ export default function DonatePage() {
               </p>
             </form>
 
-            <div className="mt-8 overflow-hidden bg-spruce-deep">
+            <div className="mt-8 overflow-hidden bg-navy-deep">
               <img
                 src={IMAGES.storyHealth}
                 alt="A Kenyan community health worker weighing a baby at an outreach clinic"

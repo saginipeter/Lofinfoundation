@@ -37,7 +37,7 @@ export function Wordmark({
   className?: string;
 }) {
   return (
-    <span className={cn("flex items-center gap-3", tone === "dark" ? "text-spruce" : "text-bone", className)}>
+    <span className={cn("flex items-center gap-3", tone === "dark" ? "text-paper" : "text-paper", className)}>
       <WordmarkMark className="size-8 shrink-0" />
       <span className="leading-none">
         <span className="block text-[1.0625rem] font-semibold tracking-[0.34em] uppercase">
@@ -46,7 +46,7 @@ export function Wordmark({
         <span
           className={cn(
             "mt-1 block text-[0.5625rem] font-medium tracking-[0.42em] uppercase",
-            tone === "dark" ? "text-spruce/60" : "text-bone/65",
+            tone === "dark" ? "text-paper/60" : "text-paper/65",
           )}
         >
           {org.wordmarkBottom}

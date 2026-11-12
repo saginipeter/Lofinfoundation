@@ -1,5 +1,5 @@
 /**
- * LOFIN FOUNDATION — central content source.
+ * LOFIN FOUNDATION: central content source.
  *
  * PLACEHOLDER DRAFT for a Kenyan foundation. The framing, counties, currency and
  * giving methods are Kenyan; the specific facts are not. Programme names, statistics,
@@ -36,7 +36,7 @@ export const currency = {
 /** Single formatter so no page hard-codes a currency symbol. */
 export const money = (value: number | string) => {
   const number = typeof value === "string" ? Number(value.replace(/,/g, "")) : value;
-  if (!Number.isFinite(number)) return `${currency.symbol} —`;
+  if (!Number.isFinite(number)) return `${currency.symbol} n/a`;
   return `${currency.symbol} ${number.toLocaleString("en-KE")}`;
 };
 
@@ -47,9 +47,9 @@ export const org = {
   country: "Kenya",
   /** Placeholder strapline. Replace with the foundation's own words. */
   strapline: "Building opportunity through stronger communities",
-  /** Placeholder Kiswahili strapline — confirm the wording before launch. */
+  /** Placeholder Kiswahili strapline. Confirm the wording before launch. */
   straplineSw: "Jamii yenye nguvu, maendeleo thabiti",
-  /** Unconfirmed legal detail — replace once registration is settled. */
+  /** Unconfirmed legal detail. Replace once registration is settled. */
   registrationNote: "Registered in Kenya · NGO Coordination Board number [to be confirmed]",
   taxNote: "KRA PIN [to be confirmed] · Public Benefits Organisation status [to be confirmed]",
   foundedYear: 2016,
@@ -87,7 +87,7 @@ export const heroSlides: HeroSlide[] = [
     kicker: "Community voice",
     headline: "Building opportunity through stronger communities",
     standfirst:
-      "Kenyans rank their own towns as places worth investing in. A survey we funded here finds that many still do not believe their ideas will be heard — or that they have a say in what comes next.",
+      "Kenyans rank their own towns as places worth investing in. A survey we funded here finds that many still do not believe their ideas will be heard, or that they have a say in what comes next.",
     ctaLabel: "Read the research",
     href: "/impact",
     alt: "A women's group meeting outdoors under an acacia tree in rural Kenya",
@@ -98,7 +98,7 @@ export const heroSlides: HeroSlide[] = [
     kicker: "Water & land",
     headline: "What we do next will determine the river's future",
     standfirst:
-      "A reporting series following the people and communities using nature-based solutions — sand dams, terraces and restored catchment forest — to protect water through a changing climate.",
+      "A reporting series following the people and communities using nature-based solutions, from sand dams and terraces to restored catchment forest, to protect water through a changing climate.",
     ctaLabel: "Explore the series",
     href: "/our-work/water-land",
     alt: "Women filling jerrycans at a new borehole in semi-arid northern Kenya",
@@ -109,7 +109,7 @@ export const heroSlides: HeroSlide[] = [
     kicker: "Learning & opportunity",
     headline: "Do students feel known at school?",
     standfirst:
-      "Half of the young people in our grantee surveys said one adult who noticed them changed their path. We are funding the schools making that ordinary — from Primary 3 reading to the senior school transition.",
+      "Half of the young people in our grantee surveys said one adult who noticed them changed their path. We are funding the schools making that ordinary, from Primary 3 reading to the senior school transition.",
     ctaLabel: "See the programme",
     href: "/our-work/learning-opportunity",
     alt: "Kenyan pupils reading at their desks while a teacher writes on the board",
@@ -120,7 +120,7 @@ export const mission = {
   eyebrow: "Why we exist",
   heading: "Every community already holds most of the answers. Our job is to fund them.",
   body: [
-    "LOFIN Foundation backs Kenyan organisations in learning, water and land, health access and local economies — the four areas where a modest, patient grant changes what a place can do for itself.",
+    "LOFIN Foundation backs Kenyan organisations in learning, water and land, health access and local economies, the four areas where a modest, patient grant changes what a place can do for itself.",
     "This is placeholder draft copy. Replace this paragraph with your registered mission statement, and the whole site updates from a single line in the content file.",
   ],
   image: IMAGES.aboutValues,
@@ -145,7 +145,7 @@ export type Stat = {
   decimals?: number;
 };
 
-/** Illustrative figures only — not real data. Both bands below are labelled as such. */
+/** Illustrative figures only, not real data. Both bands below are labelled as such. */
 export const impactStats: Stat[] = [
   {
     label: "Granted to date",
@@ -212,7 +212,7 @@ export const programs: Program[] = [
     name: "Learning & Opportunity",
     tagline: "Schools and out-of-school time that notice the child",
     summary:
-      "We support reading in the language of instruction, teacher coaching and the transition out of school — so young Kenyans finish with somewhere to go.",
+      "We support reading in the language of instruction, teacher coaching and the transition out of school, so young Kenyans finish with somewhere to go.",
     detail:
       "Placeholder detail: what the programme funds, what it refuses, and the theory of change in plain language. Two paragraphs is enough for most readers.",
     image: IMAGES.heroLearning,
@@ -412,7 +412,7 @@ export const stories: Story[] = [
     standfirst:
       "Three wards, one river and a decade of learning that the first draft should never be written in Nairobi.",
     body: [
-      "The restoration plan that finally worked was the fourth one. The first three were technically sound and socially deaf — drawn up by engineers who had never had tea with the people whose shambas the water crosses.",
+      "The restoration plan that finally worked was the fourth one. The first three were technically sound and socially deaf, drawn up by engineers who had never had tea with the people whose shambas the water crosses.",
       "What changed was sequence. The coalition ran twelve baraza meetings before a single drawing, paid the residents who attended, and published what they had heard before publishing what they proposed.",
       "Two years on, the reach holds sediment in place, the county assembly funds the monitoring, and the word 'stakeholder' has quietly disappeared from the meeting minutes.",
     ],
@@ -434,7 +434,7 @@ export const stories: Story[] = [
       "The cheapest drought break in the county turns out to be a series of small dams, dug and maintained by the people downstream of them.",
     body: [
       "When the county's crews walked the upper basin in August, they found green strips where the model said there should be dust.",
-      "The dams are low cost — cement, a stone weir, and a community that keeps the channel clear. What took negotiation was the question of who owns the water table, and the answer came from a chief who had grown up on that river.",
+      "The dams are low cost: cement, a stone weir, and a community that keeps the channel clear. What took negotiation was the question of who owns the water table, and the answer came from a chief who had grown up on that river.",
       "The approach is now written into the county's five-year integrated development plan at a fraction of the cost of the mechanical option it replaced.",
     ],
     pullQuote: "Half our drought budget now goes to works the community built itself.",
@@ -450,7 +450,7 @@ export const stories: Story[] = [
     image: IMAGES.getInvolved,
     alt: "Volunteers planting seedlings along a restored urban riverbank in Kenya",
     summary:
-      "After the stone stopped moving, the trading centre bet on water, fishing and a river walk — and the first season brought back more visitors than jobs.",
+      "After the stone stopped moving, the trading centre bet on water, fishing and a river walk, and the first season brought back more visitors than jobs.",
     standfirst:
       "A century of extraction left a silted river and a proud town. Both are now being repaired by the same people.",
     body: [
@@ -496,7 +496,7 @@ export const stories: Story[] = [
     standfirst:
       "We asked 1,200 teachers across nine counties one unusual question: does this place notice you? The answer predicts who stays.",
     body: [
-      "The correlation is not salary. It is whether a teacher can name one adult in the staffroom who checks on them on the hard days — and whether the head teacher protects time to do it.",
+      "The correlation is not salary. It is whether a teacher can name one adult in the staffroom who checks on them on the hard days, and whether the head teacher protects time to do it.",
       "Schools that funded thirty unprotected minutes a week for coaching conversations scored highest on mattering, and lowest on unplanned absence.",
       "Figures here are placeholders for whatever your research actually finds.",
     ],
@@ -561,7 +561,7 @@ export const stories: Story[] = [
     body: [
       "Failure is the curriculum. The club keeps a wall of broken models, each labelled with the load and the reason.",
       "Four of last year's members are now on TVET scholarships the club did not arrange but did help them believe they could ask for.",
-      "Names and outcomes are placeholders — get written consent, and parental consent for anyone under eighteen, before publishing a young person's story.",
+      "Names and outcomes are placeholders. Get written consent, and parental consent for anyone under eighteen, before publishing a young person's story.",
     ],
     pullQuote: "We do not celebrate the bridge. We celebrate the diagnosis.",
   },
@@ -572,7 +572,7 @@ export const getStory = (slug: string) => stories.find((s) => s.slug === slug);
 export const quote = {
   eyebrow: "In our own words",
   text: "It is not what you gather in life, it is what you scatter that tells the kind of life you have lived.",
-  attribution: "Placeholder founder attribution — replace with your own, or use a board-approved line",
+  attribution: "Placeholder founder attribution. Replace with your own, or use a board-approved line",
 } as const;
 
 export type Person = {
@@ -727,7 +727,7 @@ export const governanceDocuments = [
 
 /** Placeholder financial summary for the About page. */
 export const financials = {
-  note: "Illustrative only — replace with audited figures before publishing.",
+  note: "Illustrative only. Replace with audited figures before publishing.",
   rows: [
     { label: "Grant expenditure", value: money(46800000), detail: "Placeholder current-year spend" },
     { label: "Operating costs", value: "9%", detail: "Placeholder share of total outgoings" },
@@ -886,7 +886,7 @@ export const impactFaq = [
   },
   {
     q: "Is my enquiry stored?",
-    a: "In this draft, no. The form is front-end only — nothing is submitted, transmitted or saved anywhere.",
+    a: "In this draft, no. The form is front-end only: nothing is submitted, transmitted or saved anywhere.",
   },
 ] as const;
 
@@ -957,14 +957,14 @@ export const donate = {
     title: "Give by M-Pesa",
     lines: [
       "Go to M-Pesa, then Lipa na M-Pesa (Paybill).",
-      "Paybill number: [400XXXX] — placeholder, not a live number.",
+      "Paybill number: [400XXXX] (placeholder, not a live number).",
       "Account code: your phone number, or LOFIN if you want the gift left where need is sharpest.",
     ],
   },
   bank: {
     title: "Give by bank transfer",
     lines: [
-      "[Bank name], [Branch] — placeholder.",
+      "[Bank name], [Branch] (placeholder).",
       "Account name: LOFIN Foundation. Account number: [0000000000].",
       "Branch code and SWIFT: [to be confirmed]. Send the deposit slip to [email] for a receipt.",
     ],
@@ -975,7 +975,7 @@ export const donate = {
     "This page is a design preview. Payment processing is not connected and the paybill and account numbers above are placeholders, so pressing the button will not move money and records nothing.",
   ],
   liveNote:
-    "What happens next, when this goes live: connect M-Pesa (Safaricom Daraja) for STK push and a card gateway such as Flutterwave or Pesapal for international donors, keep the same amount ladder in KSh, and add receipt handling plus any tax-relief wording once the registration and Public Benefits Organisation status are confirmed.",
+    "connect M-Pesa (Safaricom Daraja) for STK push and a card gateway such as Flutterwave or Pesapal for international donors, keep the same amount ladder in KSh, and add receipt handling plus any tax-relief wording once the registration and Public Benefits Organisation status are confirmed.",
 } as const;
 
 export const ourWorkIntro = {
@@ -999,7 +999,7 @@ export const contact = {
   address: ["LOFIN Foundation", "[Street address placeholder], [Estate]", "Nairobi, Kenya"],
   email: "info@lofinfoundation.co.ke",
   phone: "+254 700 000 000 [placeholder]",
-  hours: "Monday to Friday, 08:00–17:00 East African Time (UTC+3)",
+  hours: "Monday to Friday, 08:00 to 17:00 East African Time (UTC+3)",
   topics: [
     "General enquiry",
     "Grant application",
@@ -1050,40 +1050,40 @@ export const footerColumns = [
 /** Per-route document titles and descriptions, kept with the rest of the content. */
 export const pageMeta: Record<string, { title: string; description: string }> = {
   "/": {
-    title: "LOFIN Foundation — Building opportunity through stronger Kenyan communities",
+    title: "LOFIN Foundation | Building opportunity through stronger Kenyan communities",
     description:
       "LOFIN Foundation is a Kenyan foundation investing in learning, water and land, health access and local economies. Preview draft with placeholder content.",
   },
   "/about": {
-    title: "About us — LOFIN Foundation, Kenya",
+    title: "About us | LOFIN Foundation, Kenya",
     description: "Purpose, vision, values, history, leadership and governance.",
   },
   "/our-work": {
-    title: "Our work — LOFIN Foundation",
+    title: "Our work | LOFIN Foundation",
     description: "Four programme areas across fourteen Kenyan counties.",
   },
   "/impact": {
-    title: "Impact — LOFIN Foundation",
+    title: "Impact | LOFIN Foundation",
     description: "Placeholder KSh figures, allocation and our approach to measuring what changed.",
   },
   "/stories": {
-    title: "Stories — LOFIN Foundation",
+    title: "Stories | LOFIN Foundation",
     description: "Reporting from the Kenyan counties we fund.",
   },
   "/get-involved": {
-    title: "Get involved — LOFIN Foundation",
+    title: "Get involved | LOFIN Foundation",
     description: "Volunteer, partner, give by M-Pesa or work with us.",
   },
   "/donate": {
-    title: "Donate — LOFIN Foundation",
+    title: "Donate | LOFIN Foundation",
     description: "Support the work in Kenyan shillings. Preview only: payment processing is not connected.",
   },
   "/contact": {
-    title: "Contact — LOFIN Foundation",
+    title: "Contact | LOFIN Foundation",
     description: "Nairobi office, placeholder details and enquiry form.",
   },
   "/404": {
-    title: "Page not found — LOFIN Foundation",
+    title: "Page not found | LOFIN Foundation",
     description: "The page you asked for is not available.",
   },
 };

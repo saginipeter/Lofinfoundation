@@ -36,7 +36,7 @@ export default function GetInvolved() {
       />
 
       {/* Pathways */}
-      <section aria-labelledby="pathways-heading" className="bg-bone">
+      <section aria-labelledby="pathways-heading" className="bg-navy">
         <div className="container py-20">
           <SectionHeading align="left" id="pathways-heading">
             Choose your route
@@ -45,10 +45,10 @@ export default function GetInvolved() {
             {pathways.map((item, index) => (
               <li key={item.title}>
                 <Reveal delay={index * 80}>
-                  <div className="flex h-full flex-col border-t-2 border-spruce bg-card p-6">
+                  <div className="flex h-full flex-col border-t-2 border-paper bg-card p-6">
                     <span className="font-display text-2xl text-terracotta">0{index + 1}</span>
                     <h3 className="mt-3 text-[1.1875rem] leading-snug">{item.title}</h3>
-                    <p className="mt-3 flex-1 text-[0.9375rem] leading-relaxed text-spruce/85">
+                    <p className="mt-3 flex-1 text-[0.9375rem] leading-relaxed text-paper/85">
                       {item.body}
                     </p>
                     <div className="mt-6">
@@ -68,7 +68,7 @@ export default function GetInvolved() {
       <section
         id="volunteer"
         aria-labelledby="volunteer-heading"
-        className="scroll-mt-24 border-y border-border bg-bone-deep"
+        className="scroll-mt-24 border-y border-border bg-navy-raise"
       >
         <div className="container py-20">
           <div className="flex flex-col items-start justify-between gap-4 sm:flex-row sm:items-end">
@@ -84,12 +84,12 @@ export default function GetInvolved() {
           <table className="mt-10 w-full border-collapse border border-border bg-card text-left">
             <caption className="sr-only">Volunteer placements with commitment, location and closing date</caption>
             <thead>
-              <tr className="border-b border-border bg-bone">
+              <tr className="border-b border-border bg-navy">
                 {["Role", "Commitment", "Location", "Applications close"].map((heading) => (
                   <th
                     key={heading}
                     scope="col"
-                    className="px-5 py-4 text-[0.7rem] font-bold uppercase tracking-[0.18em] text-spruce"
+                    className="px-5 py-4 text-[0.7rem] font-bold uppercase tracking-[0.18em] text-paper"
                   >
                     {heading}
                   </th>
@@ -99,16 +99,16 @@ export default function GetInvolved() {
             <tbody>
               {placements.map((placement) => (
                 <tr key={placement.role} className="border-b border-border last:border-0">
-                  <th scope="row" className="px-5 py-5 text-left align-top font-display text-[1.0625rem] font-normal leading-snug text-spruce">
+                  <th scope="row" className="px-5 py-5 text-left align-top font-display text-[1.0625rem] font-normal leading-snug text-paper">
                     {placement.role}
                   </th>
-                  <td className="px-5 py-5 align-top text-[0.9375rem] text-spruce/85">
+                  <td className="px-5 py-5 align-top text-[0.9375rem] text-paper/85">
                     {placement.commitment}
                   </td>
-                  <td className="px-5 py-5 align-top text-[0.9375rem] text-spruce/85">
+                  <td className="px-5 py-5 align-top text-[0.9375rem] text-paper/85">
                     {placement.location}
                   </td>
-                  <td className="px-5 py-5 align-top text-[0.9375rem] text-spruce/85">
+                  <td className="px-5 py-5 align-top text-[0.9375rem] text-paper/85">
                     {placement.closes}
                   </td>
                 </tr>
@@ -116,14 +116,14 @@ export default function GetInvolved() {
             </tbody>
           </table>
 
-          <p className="mt-6 text-[0.9375rem] text-spruce/80">
+          <p className="mt-6 text-[0.9375rem] text-paper/80">
             Panel members get a briefing pack and an expense, because reading applications is work.
           </p>
         </div>
       </section>
 
       {/* Partnership */}
-      <section id="partner" aria-labelledby="partner-heading" className="scroll-mt-24 bg-bone">
+      <section id="partner" aria-labelledby="partner-heading" className="scroll-mt-24 bg-navy">
         <div className="container py-20">
           <Eyebrow>Partner</Eyebrow>
           <h2 id="partner-heading" className="mt-3 text-3xl sm:text-4xl">
@@ -141,7 +141,7 @@ export default function GetInvolved() {
                 <Reveal delay={index * 70}>
                   <div className="h-full border border-border bg-card p-6">
                     <h3 className="text-[1.0625rem] leading-snug">{type.title}</h3>
-                    <p className="mt-3 text-[0.9375rem] leading-relaxed text-spruce/85">
+                    <p className="mt-3 text-[0.9375rem] leading-relaxed text-paper/85">
                       {type.body}
                     </p>
                   </div>
@@ -156,7 +156,7 @@ export default function GetInvolved() {
       <section
         id="give"
         aria-labelledby="give-heading"
-        className="scroll-mt-24 border-y border-border bg-bone-deep"
+        className="scroll-mt-24 border-y border-border bg-navy-raise"
       >
         <div className="container grid gap-12 py-20 lg:grid-cols-[1fr_1.3fr]">
           <Reveal>
@@ -183,12 +183,12 @@ export default function GetInvolved() {
                 <Reveal delay={index * 70}>
                   <div className="flex h-full flex-col border-t-2 border-terracotta bg-card p-6">
                     <h3 className="text-[1.0625rem] leading-snug">{way.title}</h3>
-                    <p className="mt-3 flex-1 text-[0.9375rem] leading-relaxed text-spruce/85">
+                    <p className="mt-3 flex-1 text-[0.9375rem] leading-relaxed text-paper/85">
                       {way.body}
                     </p>
                     <Link
                       href={way.href}
-                      className="mt-5 inline-flex w-fit border-b border-spruce/30 pb-1 text-[0.7rem] font-bold uppercase tracking-[0.16em] text-spruce hover:border-terracotta hover:text-terracotta"
+                      className="mt-5 inline-flex w-fit border-b border-paper/30 pb-1 text-[0.7rem] font-bold uppercase tracking-[0.16em] text-paper hover:border-terracotta hover:text-terracotta"
                     >
                       {way.cta}
                     </Link>
@@ -204,7 +204,7 @@ export default function GetInvolved() {
       <section
         id="careers"
         aria-labelledby="careers-heading"
-        className="scroll-mt-24 bg-bone"
+        className="scroll-mt-24 bg-navy"
       >
         <div className="container py-20">
           <div className="flex flex-col items-start justify-between gap-4 sm:flex-row sm:items-end">
@@ -220,12 +220,12 @@ export default function GetInvolved() {
           <table className="mt-10 w-full border-collapse border border-border bg-card text-left">
             <caption className="sr-only">Open roles with contract type and salary band</caption>
             <thead>
-              <tr className="border-b border-border bg-bone-deep">
+              <tr className="border-b border-border bg-navy-raise">
                 {["Role", "Type", "Band", ""].map((heading) => (
                   <th
                     key={heading || "apply"}
                     scope="col"
-                    className="px-5 py-4 text-[0.7rem] font-bold uppercase tracking-[0.18em] text-spruce"
+                    className="px-5 py-4 text-[0.7rem] font-bold uppercase tracking-[0.18em] text-paper"
                   >
                     {heading}
                   </th>
@@ -235,15 +235,15 @@ export default function GetInvolved() {
             <tbody>
               {roles.map((role) => (
                 <tr key={role.title} className="border-b border-border last:border-0">
-                  <th scope="row" className="px-5 py-5 text-left font-display text-[1.0625rem] font-normal leading-snug text-spruce">
+                  <th scope="row" className="px-5 py-5 text-left font-display text-[1.0625rem] font-normal leading-snug text-paper">
                     {role.title}
                   </th>
-                  <td className="px-5 py-5 text-[0.9375rem] text-spruce/85">{role.type}</td>
-                  <td className="px-5 py-5 text-[0.9375rem] text-spruce/85">{role.grade}</td>
+                  <td className="px-5 py-5 text-[0.9375rem] text-paper/85">{role.type}</td>
+                  <td className="px-5 py-5 text-[0.9375rem] text-paper/85">{role.grade}</td>
                   <td className="px-5 py-5 text-right">
                     <Link
                       href="/contact"
-                      className="text-[0.7rem] font-bold uppercase tracking-[0.16em] text-terracotta hover:text-spruce"
+                      className="text-[0.7rem] font-bold uppercase tracking-[0.16em] text-terracotta hover:text-paper"
                     >
                       Apply
                     </Link>
@@ -256,12 +256,12 @@ export default function GetInvolved() {
       </section>
 
       {/* Events */}
-      <section aria-labelledby="events-heading" className="border-t border-border bg-spruce-deep text-bone">
+      <section aria-labelledby="events-heading" className="border-t border-border bg-navy-deep text-paper">
         <div className="container py-20">
           <div className="flex flex-col items-start justify-between gap-4 sm:flex-row sm:items-end">
             <div>
               <Eyebrow className="text-gold">Events</Eyebrow>
-              <h2 id="events-heading" className="mt-3 text-3xl text-bone sm:text-4xl">
+              <h2 id="events-heading" className="mt-3 text-3xl text-paper sm:text-4xl">
                 Where you can find us
               </h2>
             </div>
@@ -274,16 +274,16 @@ export default function GetInvolved() {
                 <Reveal delay={index * 80}>
                   <div className="flex h-full gap-5 border-t-2 border-gold pt-5">
                     <p className="shrink-0 text-center">
-                      <span className="block font-display text-[1.75rem] leading-none text-bone">
+                      <span className="block font-display text-[1.75rem] leading-none text-paper">
                         {event.date}
                       </span>
-                      <span className="mt-1 block text-[0.7rem] uppercase tracking-[0.16em] text-bone/60">
+                      <span className="mt-1 block text-[0.7rem] uppercase tracking-[0.16em] text-paper/60">
                         {event.year}
                       </span>
                     </p>
                     <div>
-                      <h3 className="text-[1.0625rem] leading-snug text-bone">{event.title}</h3>
-                      <p className="mt-2 text-[0.9375rem] leading-relaxed text-bone/75">
+                      <h3 className="text-[1.0625rem] leading-snug text-paper">{event.title}</h3>
+                      <p className="mt-2 text-[0.9375rem] leading-relaxed text-paper/75">
                         {event.detail}
                       </p>
                       <p className="mt-3 text-[0.75rem] uppercase tracking-[0.14em] text-gold">

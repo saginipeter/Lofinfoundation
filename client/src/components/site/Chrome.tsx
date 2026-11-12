@@ -24,9 +24,9 @@ export function DraftRibbon() {
   if (dismissed) return null;
 
   return (
-    <div className="bg-gold text-spruce-deep print:hidden">
+    <div className="bg-gold text-ink print:hidden">
       <div className="container flex items-center justify-center gap-3 py-2 text-center text-[0.75rem] font-medium">
-        <span>Preview draft — all copy, figures, names and photos on this site are placeholders.</span>
+        <span>Preview draft. All copy, figures, names and photos on this site are placeholders.</span>
         <button
           type="button"
           aria-label="Dismiss draft notice"
@@ -38,7 +38,7 @@ export function DraftRibbon() {
             }
             setDismissed(true);
           }}
-          className="shrink-0 rounded-full p-1 hover:bg-spruce-deep/10"
+          className="shrink-0 rounded-full p-1 hover:bg-ink/15"
         >
           <X className="size-3.5" />
         </button>
@@ -113,7 +113,7 @@ export function Header() {
     <header
       ref={headerRef}
       className={cn(
-        "sticky top-0 z-50 border-b bg-bone/95 backdrop-blur transition-shadow",
+        "sticky top-0 z-50 border-b bg-navy/95 backdrop-blur transition-shadow",
         scrolled
           ? "border-border shadow-[0_10px_30px_-28px_rgba(10,36,39,0.8)]"
           : "border-transparent",
@@ -131,8 +131,8 @@ export function Header() {
               href={item.href}
               aria-current={isActive(item.href) ? "page" : undefined}
               className={cn(
-                "link-underline text-[0.8125rem] font-medium tracking-wide text-spruce/85 hover:text-spruce",
-                isActive(item.href) && "text-spruce",
+                "link-underline text-[0.8125rem] font-medium tracking-wide text-paper/85 hover:text-paper",
+                isActive(item.href) && "text-paper",
               )}
             >
               {item.label}
@@ -143,7 +143,7 @@ export function Header() {
         <div className="hidden items-center gap-3 lg:flex">
           <Link
             href="/donate"
-            className="bg-spruce px-5 py-2.5 text-[0.75rem] font-bold uppercase tracking-[0.16em] text-bone transition-colors hover:bg-terracotta-deep"
+            className="bg-gold px-5 py-2.5 text-[0.75rem] font-bold uppercase tracking-[0.16em] text-ink transition-colors hover:bg-paper"
           >
             Donate
           </Link>
@@ -151,7 +151,7 @@ export function Header() {
 
         <button
           type="button"
-          className="p-2 text-spruce lg:hidden"
+          className="p-2 text-paper lg:hidden"
           ref={triggerRef}
           aria-expanded={open}
           aria-controls="mobile-navigation"
@@ -174,7 +174,7 @@ export function Header() {
         aria-label="Site navigation"
         tabIndex={-1}
         style={{ top: headerHeight }}
-        className="fixed inset-x-0 bottom-0 z-40 overflow-y-auto bg-bone outline-none lg:hidden"
+        className="fixed inset-x-0 bottom-0 z-40 overflow-y-auto bg-navy outline-none lg:hidden"
       >
         <nav aria-label="Mobile" className="container flex flex-col gap-1 py-6">
           {nav.map((item) => (
@@ -183,7 +183,7 @@ export function Header() {
               href={item.href}
               aria-current={isActive(item.href) ? "page" : undefined}
               className={cn(
-                "border-b border-border py-4 font-display text-2xl text-spruce",
+                "border-b border-border py-4 font-display text-2xl text-paper",
                 isActive(item.href) && "text-terracotta",
               )}
             >
@@ -221,18 +221,18 @@ export function PageBanner({
   children?: ReactNode;
 }) {
   return (
-    <section className="relative isolate overflow-hidden bg-spruce-deep">
+    <section className="relative isolate overflow-hidden bg-navy-deep">
       <img src={image} alt={alt} className="absolute inset-0 size-full object-cover opacity-55" />
       <div
-        className="absolute inset-0 bg-gradient-to-r from-spruce-deep via-spruce-deep/80 to-spruce-deep/25"
+        className="absolute inset-0 bg-gradient-to-r from-navy-deep via-navy-deep/80 to-navy-deep/25"
         aria-hidden
       />
       <div className="container relative py-20 sm:py-28">
         <Reveal className="max-w-3xl">
           <p className="eyebrow text-gold">{eyebrow}</p>
-          <h1 className="mt-4 text-4xl leading-[1.05] text-bone sm:text-5xl md:text-6xl">{title}</h1>
+          <h1 className="mt-4 text-4xl leading-[1.05] text-paper sm:text-5xl md:text-6xl">{title}</h1>
           {intro && (
-            <p className="mt-6 max-w-2xl text-[1.0625rem] leading-relaxed text-bone/80">{intro}</p>
+            <p className="mt-6 max-w-2xl text-[1.0625rem] leading-relaxed text-paper/80">{intro}</p>
           )}
           {children}
         </Reveal>
@@ -266,21 +266,21 @@ function NewsletterForm() {
             if (state !== "idle") setState("idle");
           }}
           placeholder="EMAIL ADDRESS"
-          className="min-w-0 flex-1 border border-bone/30 bg-transparent px-4 py-3 text-sm uppercase tracking-[0.12em] text-bone placeholder:text-bone/45 focus:border-gold focus:outline-none"
+          className="min-w-0 flex-1 border border-paper/30 bg-transparent px-4 py-3 text-sm uppercase tracking-[0.12em] text-paper placeholder:text-paper/45 focus:border-gold focus:outline-none"
         />
         <button
           type="submit"
-          className="border border-gold bg-gold px-6 py-3 text-[0.7rem] font-semibold uppercase tracking-[0.2em] text-spruce-deep transition-colors hover:bg-transparent hover:text-gold"
+          className="border border-gold bg-gold px-6 py-3 text-[0.7rem] font-semibold uppercase tracking-[0.2em] text-ink transition-colors hover:bg-transparent hover:text-gold"
         >
           Sign up
         </button>
       </form>
       <p
-        className={cn("mt-3 text-[0.75rem]", state === "error" ? "text-gold" : "text-bone/55")}
+        className={cn("mt-3 text-[0.75rem]", state === "error" ? "text-gold" : "text-paper/55")}
         role={state === "error" ? "alert" : undefined}
       >
         {state === "error" && "Enter a valid email address."}
-        {state === "done" && "Placeholder confirmation — no mailing list is connected yet."}
+        {state === "done" && "Placeholder confirmation. No mailing list is connected yet."}
         {state === "idle" &&
           "One email a month on new grants and reporting. This form is front-end only in the draft."}
       </p>
@@ -290,11 +290,11 @@ function NewsletterForm() {
 
 export function Footer() {
   return (
-    <footer className="bg-spruce-deep text-bone">
+    <footer className="bg-navy-deep text-paper">
       <div className="container grid gap-14 py-20 lg:grid-cols-[1.1fr_1fr]">
         <div>
           <Wordmark tone="light" />
-          <p className="mt-6 max-w-md font-display text-[1.375rem] leading-snug text-bone/85">
+          <p className="mt-6 max-w-md font-display text-[1.375rem] leading-snug text-paper/85">
             {org.strapline}
           </p>
           <p className="mt-2 max-w-md text-[0.9375rem] italic leading-snug text-gold/80">
@@ -308,7 +308,7 @@ export function Footer() {
                 target="_blank"
                 rel="noreferrer"
                 aria-label={`${org.name} on ${social.label}`}
-                className="border border-bone/25 px-3 py-2 text-[0.65rem] font-semibold uppercase tracking-[0.18em] text-bone/75 transition-colors hover:border-gold hover:text-gold"
+                className="border border-paper/25 px-3 py-2 text-[0.65rem] font-semibold uppercase tracking-[0.18em] text-paper/75 transition-colors hover:border-gold hover:text-gold"
               >
                 {social.short}
               </a>
@@ -325,7 +325,7 @@ export function Footer() {
         <div className="grid gap-10 sm:grid-cols-2 xl:grid-cols-4">
           {footerColumns.map((column) => (
             <div key={column.title}>
-              <h2 className="text-[0.6875rem] font-semibold uppercase tracking-[0.22em] text-bone/50">
+              <h2 className="text-[0.6875rem] font-semibold uppercase tracking-[0.22em] text-paper/50">
                 {column.title}
               </h2>
               <ul className="mt-4 space-y-3">
@@ -333,7 +333,7 @@ export function Footer() {
                   <li key={`${column.title}-${link.label}`}>
                     <Link
                       href={link.href}
-                      className="link-underline text-[0.9375rem] text-bone/85 hover:text-bone"
+                      className="link-underline text-[0.9375rem] text-paper/85 hover:text-paper"
                     >
                       {link.label}
                     </Link>
@@ -345,22 +345,22 @@ export function Footer() {
         </div>
       </div>
 
-      <div className="border-t border-bone/15">
-        <div className="container flex flex-col gap-3 py-6 text-[0.75rem] text-bone/55 sm:flex-row sm:items-center sm:justify-between">
+      <div className="border-t border-paper/15">
+        <div className="container flex flex-col gap-3 py-6 text-[0.75rem] text-paper/55 sm:flex-row sm:items-center sm:justify-between">
           <div className="space-y-1">
             <p>
               {new Date().getFullYear()} {org.name}. {org.registrationNote}
             </p>
-            <p className="text-bone/45">{org.taxNote}</p>
+            <p className="text-paper/45">{org.taxNote}</p>
           </div>
           <div className="flex gap-6">
-            <Link href="/contact" className="hover:text-bone">
+            <Link href="/contact" className="hover:text-paper">
               Contact
             </Link>
-            <Link href="/about#leadership" className="hover:text-bone">
+            <Link href="/about#leadership" className="hover:text-paper">
               Governance
             </Link>
-            <Link href="/impact" className="hover:text-bone">
+            <Link href="/impact" className="hover:text-paper">
               Transparency
             </Link>
           </div>
@@ -379,12 +379,12 @@ export function SupportBand({
   body?: string;
 }) {
   return (
-    <section className="bg-bone-deep">
+    <section className="bg-navy-raise">
       <div className="container flex flex-col items-start justify-between gap-8 py-16 md:flex-row md:items-center">
         <Reveal className="max-w-2xl">
           <Eyebrow>Take it further</Eyebrow>
           <h2 className="mt-3 text-3xl sm:text-4xl">{title}</h2>
-          <p className="mt-4 text-[1.0625rem] leading-relaxed text-spruce/80">{body}</p>
+          <p className="mt-4 text-[1.0625rem] leading-relaxed text-paper/80">{body}</p>
         </Reveal>
         <div className="flex flex-wrap gap-3">
           <EditorialButton href="/donate" tone="solid">

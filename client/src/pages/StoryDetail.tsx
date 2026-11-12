@@ -27,7 +27,7 @@ export default function StoryDetail() {
     story ? `/stories/${story.slug}` : "/stories",
     story
       ? {
-          title: `${story.title} — ${org.name}`,
+          title: `${story.title} | ${org.name}`,
           description: story.summary,
         }
       : undefined,
@@ -40,31 +40,31 @@ export default function StoryDetail() {
   return (
     <SitePage>
       <article>
-        <header className="relative isolate overflow-hidden bg-spruce-deep">
+        <header className="relative isolate overflow-hidden bg-navy-deep">
           <img
             src={story.image}
             alt={story.alt}
             className="absolute inset-0 size-full object-cover opacity-60"
           />
           <div
-            className="absolute inset-0 bg-gradient-to-t from-spruce-deep via-spruce-deep/70 to-spruce-deep/20"
+            className="absolute inset-0 bg-gradient-to-t from-navy-deep via-navy-deep/70 to-navy-deep/20"
             aria-hidden
           />
           <div className="container relative flex min-h-[56vh] flex-col justify-end pb-16 pt-24">
             <Reveal className="max-w-3xl">
               <Link
                 href={story.categoryHref}
-                className="text-[0.75rem] font-bold uppercase tracking-[0.16em] text-gold hover:text-bone"
+                className="text-[0.75rem] font-bold uppercase tracking-[0.16em] text-gold hover:text-paper"
               >
                 {story.category}
               </Link>
-              <h1 className="mt-5 text-[2.1rem] leading-[1.08] text-bone sm:text-[3rem]">
+              <h1 className="mt-5 text-[2.1rem] leading-[1.08] text-paper sm:text-[3rem]">
                 {story.title}
               </h1>
-              <p className="mt-6 max-w-2xl text-[1.0625rem] leading-relaxed text-bone/85">
+              <p className="mt-6 max-w-2xl text-[1.0625rem] leading-relaxed text-paper/85">
                 {story.standfirst}
               </p>
-              <div className="mt-8 flex flex-wrap items-center gap-x-5 gap-y-2 text-[0.75rem] uppercase tracking-[0.12em] text-bone/70">
+              <div className="mt-8 flex flex-wrap items-center gap-x-5 gap-y-2 text-[0.75rem] uppercase tracking-[0.12em] text-paper/70">
                 <span>{story.author}</span>
                 <span aria-hidden>&middot;</span>
                 <time dateTime={story.date}>{story.dateLabel}</time>
@@ -75,17 +75,17 @@ export default function StoryDetail() {
           </div>
         </header>
 
-        <section className="bg-bone">
+        <section className="bg-navy">
           <div className="container grid gap-12 py-20 lg:grid-cols-[1.5fr_1fr]">
             <Reveal>
               <Prose className="text-[1.09375rem]">
                 {story.body.map((paragraph, index) => (
                   <p key={`${story.slug}-p${index}`}>{paragraph}</p>
                 ))}
-                <blockquote className="border-l-2 border-terracotta pl-6 font-display text-[1.4rem] italic leading-snug text-spruce">
+                <blockquote className="border-l-2 border-terracotta pl-6 font-display text-[1.4rem] italic leading-snug text-paper">
                   {story.pullQuote}
                 </blockquote>
-                <p className="text-[0.9375rem] text-spruce/75">
+                <p className="text-[0.9375rem] text-paper/75">
                   Placeholder editorial. Published reporting would name the funded partner, quote
                   residents with written consent, credit a real photographer and link the grant
                   record.
@@ -99,15 +99,15 @@ export default function StoryDetail() {
                 <dl className="mt-4 space-y-4 text-[0.9375rem]">
                   <div className="flex justify-between gap-4 border-b border-border pb-3">
                     <dt className="text-muted-foreground">Filed under</dt>
-                    <dd className="text-spruce">{story.category}</dd>
+                    <dd className="text-paper">{story.category}</dd>
                   </div>
                   <div className="flex justify-between gap-4 border-b border-border pb-3">
                     <dt className="text-muted-foreground">Published</dt>
-                    <dd className="text-spruce">{story.dateLabel}</dd>
+                    <dd className="text-paper">{story.dateLabel}</dd>
                   </div>
                   <div className="flex justify-between gap-4">
                     <dt className="text-muted-foreground">Byline</dt>
-                    <dd className="text-spruce">{story.author}</dd>
+                    <dd className="text-paper">{story.author}</dd>
                   </div>
                 </dl>
                 <div className="mt-5">
@@ -115,11 +115,11 @@ export default function StoryDetail() {
                 </div>
               </aside>
 
-              <div className="bg-bone-deep p-6">
-                <h2 className="text-[0.75rem] font-bold uppercase tracking-[0.18em] text-spruce">
+              <div className="bg-navy-raise p-6">
+                <h2 className="text-[0.75rem] font-bold uppercase tracking-[0.18em] text-paper">
                   Check the money
                 </h2>
-                <p className="mt-3 text-[0.9375rem] leading-relaxed text-spruce/85">
+                <p className="mt-3 text-[0.9375rem] leading-relaxed text-paper/85">
                   {org.name} publishes the grant reference behind every story so a reader can verify
                   the narrative.
                 </p>
@@ -133,13 +133,13 @@ export default function StoryDetail() {
           </div>
         </section>
 
-        <section className="border-t border-border bg-bone-deep">
+        <section className="border-t border-border bg-navy-raise">
           <div className="container py-16">
             <div className="flex flex-wrap items-end justify-between gap-4">
               <h2 className="text-2xl sm:text-3xl">More from {org.name}</h2>
               <Link
                 href="/stories"
-                className="text-[0.75rem] font-bold uppercase tracking-[0.14em] text-spruce hover:text-terracotta"
+                className="text-[0.75rem] font-bold uppercase tracking-[0.14em] text-paper hover:text-terracotta"
               >
                 All stories
               </Link>
@@ -150,7 +150,7 @@ export default function StoryDetail() {
               ))}
             </div>
             <div className="mt-10">
-              <Tag>Generated imagery — swap for your own photography before launch</Tag>
+              <Tag>Generated imagery. Swap for your own photography before launch</Tag>
             </div>
           </div>
         </section>

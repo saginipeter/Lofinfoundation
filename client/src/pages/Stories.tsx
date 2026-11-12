@@ -35,12 +35,12 @@ export default function Stories() {
       <PageBanner
         eyebrow="Stories"
         title="Reporting from the places we fund"
-        intro="Written by staff and partners. Names, places and outcomes on this draft are placeholders — publish nothing about a real person without their consent."
+        intro="Written by staff and partners. Names, places and outcomes on this draft are placeholders. Publish nothing about a real person without their consent."
         image={IMAGES.storyPublicSpace}
         alt="Residents moving through a Nairobi public space at golden hour"
       />
 
-      <section className="bg-bone">
+      <section className="bg-navy">
         <div className="container py-14">
           <div className="flex flex-col gap-6 border-b border-border pb-6 lg:flex-row lg:items-end lg:justify-between">
             <div>
@@ -54,8 +54,8 @@ export default function Stories() {
                     className={cn(
                       "border px-4 py-2 text-[0.7rem] font-semibold uppercase tracking-[0.16em] transition-colors",
                       area === item.slug
-                        ? "border-spruce bg-spruce text-bone"
-                        : "border-border bg-card text-spruce/80 hover:border-spruce hover:text-spruce",
+                        ? "border-gold bg-gold text-ink"
+                        : "border-border bg-card text-paper/80 hover:border-paper hover:text-paper",
                     )}
                   >
                     {item.name}
@@ -72,7 +72,7 @@ export default function Stories() {
           </div>
 
           {program && (
-            <p className="mt-6 text-[1.0625rem] text-spruce/80">
+            <p className="mt-6 text-[1.0625rem] text-paper/80">
               Showing stories from <span className="font-display">{program.name}</span>.
             </p>
           )}
@@ -91,7 +91,7 @@ export default function Stories() {
           ) : (
             <div className="mt-14 border border-dashed border-border bg-card p-10 text-center">
               <Tag>No stories filed under this area yet</Tag>
-              <p className="mt-4 text-[0.9375rem] text-spruce/75">
+              <p className="mt-4 text-[0.9375rem] text-paper/75">
                 This filter works as soon as real reporting is added to the content file.
               </p>
               <Link

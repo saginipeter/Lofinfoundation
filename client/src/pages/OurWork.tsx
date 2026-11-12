@@ -23,7 +23,7 @@ export default function OurWork() {
         alt={ourWorkIntro.alt}
       />
 
-      <section className="bg-bone">
+      <section className="bg-navy">
         <div className="container grid gap-10 py-16 lg:grid-cols-[1fr_1.4fr] lg:items-start">
           <Reveal className="lg:sticky lg:top-28">
             <Eyebrow>How to read these pages</Eyebrow>
@@ -50,14 +50,14 @@ export default function OurWork() {
         </div>
       </section>
 
-      <section className="border-y border-border bg-bone-deep">
+      <section className="border-y border-border bg-navy-raise">
         <div className="container grid gap-10 py-16 md:grid-cols-3">
           {strategyFigures.map((item, index) => (
             <Reveal key={item.label} delay={index * 90}>
               <div className="border-t-2 border-terracotta pt-5">
-                <p className="font-display text-[2.5rem] leading-none text-spruce">{item.value}</p>
+                <p className="font-display text-[2.5rem] leading-none text-paper">{item.value}</p>
                 <h2 className="mt-3 text-[1.0625rem]">{item.label}</h2>
-                <p className="mt-2 text-[0.9375rem] leading-relaxed text-spruce/85">{item.body}</p>
+                <p className="mt-2 text-[0.9375rem] leading-relaxed text-paper/85">{item.body}</p>
               </div>
             </Reveal>
           ))}
@@ -66,7 +66,7 @@ export default function OurWork() {
 
       <SupportBand
         title="Are you working in one of these areas?"
-        body="We do not accept unsolicited applications in the usual sense — tell us what you are trying to change and we will tell you whether it fits."
+        body="We do not accept unsolicited applications in the usual sense. Tell us what you are trying to change and we will tell you whether it fits."
       />
     </SitePage>
   );

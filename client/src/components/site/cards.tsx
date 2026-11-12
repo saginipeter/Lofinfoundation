@@ -57,7 +57,7 @@ export function HeroCarousel({ slides }: { slides: HeroSlide[] }) {
   return (
     <section
       aria-label="Featured work"
-      className="relative isolate overflow-hidden bg-spruce-deep"
+      className="relative isolate overflow-hidden bg-navy-deep"
       onMouseEnter={() => setHovered(true)}
       onMouseLeave={() => setHovered(false)}
       onFocus={() => setFocused(true)}
@@ -90,17 +90,17 @@ export function HeroCarousel({ slides }: { slides: HeroSlide[] }) {
                   loading={slideIndex === 0 ? "eager" : "lazy"}
                 />
                 <div
-                  className="absolute inset-0 bg-gradient-to-r from-spruce-deep/95 via-spruce-deep/55 to-transparent"
+                  className="absolute inset-0 bg-gradient-to-r from-navy-deep/95 via-navy-deep/55 to-transparent"
                   aria-hidden
                 />
                 <div className="absolute inset-0 flex items-end sm:items-center">
                   <div className="container">
                     <div className="max-w-xl sm:ml-auto sm:pr-4 lg:max-w-2xl">
                       <p className="eyebrow text-gold">{slide.kicker}</p>
-                      <h3 className="mt-3 text-[2rem] leading-[1.06] text-bone sm:text-4xl lg:text-[3rem]">
+                      <h3 className="mt-3 text-[2rem] leading-[1.06] text-paper sm:text-4xl lg:text-[3rem]">
                         {slide.headline}
                       </h3>
-                      <p className="mt-5 text-[0.9375rem] leading-relaxed text-bone/85 sm:text-[1.0625rem]">
+                      <p className="mt-5 text-[0.9375rem] leading-relaxed text-paper/85 sm:text-[1.0625rem]">
                         {slide.standfirst}
                       </p>
                       <div className="mt-8">
@@ -117,7 +117,7 @@ export function HeroCarousel({ slides }: { slides: HeroSlide[] }) {
         })}
       </div>
 
-      <div className="absolute inset-x-0 bottom-0 border-t border-bone/15 bg-spruce-deep/70 backdrop-blur">
+      <div className="absolute inset-x-0 bottom-0 border-t border-paper/15 bg-navy-deep/70 backdrop-blur">
         <div className="container flex items-center justify-between gap-4 py-3">
           <div className="flex gap-2">
             {slides.map((slide, slideIndex) => (
@@ -129,7 +129,7 @@ export function HeroCarousel({ slides }: { slides: HeroSlide[] }) {
                 onClick={() => go(slideIndex)}
                 className={cn(
                   "h-1 w-10 transition-colors",
-                  slideIndex === index ? "bg-gold" : "bg-bone/30 hover:bg-bone/60",
+                  slideIndex === index ? "bg-gold" : "bg-paper/25 hover:bg-paper/50",
                 )}
               />
             ))}
@@ -142,7 +142,7 @@ export function HeroCarousel({ slides }: { slides: HeroSlide[] }) {
                 onClick={() => setUserPaused((value) => !value)}
                 aria-pressed={userPaused}
                 aria-label={userPaused ? "Resume slideshow" : "Pause slideshow"}
-                className="border border-bone/30 p-2 text-bone/80 transition-colors hover:border-gold hover:text-gold"
+                className="border border-paper/30 p-2 text-paper/80 transition-colors hover:border-gold hover:text-gold"
               >
                 {userPaused ? <Play className="size-4" /> : <Pause className="size-4" />}
               </button>
@@ -151,7 +151,7 @@ export function HeroCarousel({ slides }: { slides: HeroSlide[] }) {
               type="button"
               aria-label="Previous slide"
               onClick={() => go(index - 1)}
-              className="border border-bone/30 p-2 text-bone/80 transition-colors hover:border-gold hover:text-gold"
+              className="border border-paper/30 p-2 text-paper/80 transition-colors hover:border-gold hover:text-gold"
             >
               <ArrowLeft className="size-4" />
             </button>
@@ -159,7 +159,7 @@ export function HeroCarousel({ slides }: { slides: HeroSlide[] }) {
               type="button"
               aria-label="Next slide"
               onClick={() => go(index + 1)}
-              className="border border-bone/30 p-2 text-bone/80 transition-colors hover:border-gold hover:text-gold"
+              className="border border-paper/30 p-2 text-paper/80 transition-colors hover:border-gold hover:text-gold"
             >
               <ArrowRight className="size-4" />
             </button>
@@ -179,14 +179,14 @@ export function ProgramCard({ program, index }: { program: Program; index: numbe
         index % 2 === 1 && "lg:mt-10",
       )}
     >
-      <div className="relative aspect-[16/10] overflow-hidden bg-spruce-deep">
+      <div className="relative aspect-[16/10] overflow-hidden bg-navy-deep">
         <img
           src={program.image}
           alt={program.alt}
           loading="lazy"
           className="size-full object-cover transition-transform duration-700 group-hover:scale-105"
         />
-        <span className="absolute left-4 top-4 bg-bone/90 px-2.5 py-1 font-display text-xs tracking-widest text-spruce">
+        <span className="absolute left-4 top-4 bg-paper/90 px-2.5 py-1 font-display text-xs tracking-widest text-navy">
           0{index + 1}
         </span>
       </div>
@@ -195,7 +195,7 @@ export function ProgramCard({ program, index }: { program: Program; index: numbe
         <p className="mt-2 text-[0.8125rem] font-medium uppercase tracking-[0.1em] text-sage">
           {program.tagline}
         </p>
-        <p className="mt-4 flex-1 text-[0.9375rem] leading-relaxed text-spruce/85">{program.summary}</p>
+        <p className="mt-4 flex-1 text-[0.9375rem] leading-relaxed text-paper/85">{program.summary}</p>
         <span className="mt-6 inline-flex items-center gap-2 text-[0.75rem] font-bold uppercase tracking-[0.14em] text-terracotta">
           Explore programme
           <ArrowRight className="size-3.5 transition-transform group-hover:translate-x-1" />
@@ -209,7 +209,7 @@ export function ProgramCard({ program, index }: { program: Program; index: numbe
 export function StoryFeature({ story }: { story: Story }) {
   return (
     <article className="group">
-      <Link href={`/stories/${story.slug}`} className="block overflow-hidden bg-spruce-deep">
+      <Link href={`/stories/${story.slug}`} className="block overflow-hidden bg-navy-deep">
         <img
           src={story.image}
           alt={story.alt}
@@ -224,7 +224,7 @@ export function StoryFeature({ story }: { story: Story }) {
             {story.title}
           </Link>
         </h3>
-        <p className="mt-3 text-[0.9375rem] leading-relaxed text-spruce/85">{story.summary}</p>
+        <p className="mt-3 text-[0.9375rem] leading-relaxed text-paper/85">{story.summary}</p>
         <p className="mt-4 text-[0.75rem] uppercase tracking-[0.14em] text-muted-foreground">
           {story.author} · {story.dateLabel}
         </p>
@@ -237,7 +237,7 @@ export function StoryFeature({ story }: { story: Story }) {
 export function StoryCard({ story }: { story: Story }) {
   return (
     <article className="group grid grid-cols-[112px_1fr] gap-4 border-t border-border py-5 first:border-t-0 first:pt-0 sm:grid-cols-[140px_1fr] sm:gap-5">
-      <Link href={`/stories/${story.slug}`} className="block overflow-hidden bg-spruce-deep">
+      <Link href={`/stories/${story.slug}`} className="block overflow-hidden bg-navy-deep">
         <img
           src={story.image}
           alt={story.alt}
@@ -265,10 +265,10 @@ export function StoryCard({ story }: { story: Story }) {
 export function StatBlock({ stat }: { stat: Stat }) {
   return (
     <div className="border-t-2 border-terracotta pt-5">
-      <p className="font-display text-[2.75rem] leading-none text-spruce sm:text-[3.25rem]">
+      <p className="font-display text-[2.75rem] leading-none text-paper sm:text-[3.25rem]">
         <CountUp value={stat.value} prefix={stat.prefix} suffix={stat.suffix} decimals={stat.decimals} />
       </p>
-      <p className="mt-3 text-[0.9375rem] font-medium text-spruce">{stat.label}</p>
+      <p className="mt-3 text-[0.9375rem] font-medium text-paper">{stat.label}</p>
       <p className="mt-1.5 text-[0.8125rem] leading-relaxed text-muted-foreground">{stat.note}</p>
     </div>
   );
@@ -284,13 +284,13 @@ export function QuoteBand({
   attribution: string;
 }) {
   return (
-    <section className="bg-spruce-deep py-20 text-bone sm:py-24">
+    <section className="bg-navy-deep py-20 text-paper sm:py-24">
       <div className="container max-w-4xl text-center">
         <Eyebrow className="text-gold">{eyebrow}</Eyebrow>
         <blockquote className="mt-6 font-display text-[1.6rem] italic leading-[1.35] sm:text-[2.15rem]">
           &ldquo;{text}&rdquo;
         </blockquote>
-        <p className="mt-6 text-[0.75rem] uppercase tracking-[0.2em] text-bone/65">{attribution}</p>
+        <p className="mt-6 text-[0.75rem] uppercase tracking-[0.2em] text-paper/65">{attribution}</p>
       </div>
     </section>
   );
