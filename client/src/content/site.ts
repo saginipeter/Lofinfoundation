@@ -130,7 +130,7 @@ export const mission = {
     heading: "How opportunity takes root",
     body: "A placeholder for the multi-year initiative the foundation would be judged on: the research, the funded partners, and what changes in the third year rather than the first.",
     image: IMAGES.storyPublicSpace,
-    alt: "Residents reviewing public-space plans on a street table in Nairobi",
+    alt: "Residents walking and cycling through a Nairobi public space at sunset, traders at the gate",
     ctaLabel: "Read the plan",
     href: "/our-work/local-economies",
   },
@@ -406,7 +406,7 @@ export const stories: Story[] = [
     date: "2026-10-14",
     dateLabel: "October 14, 2026",
     image: IMAGES.heroWatershed,
-    alt: "A dryland riverbed with new planting in soft morning light",
+    alt: "Women filling yellow jerrycans at a new borehole in arid northern Kenya",
     summary:
       "Partnerships with upstream communities show why lasting progress starts with listening, following their lead and earning trust over time.",
     standfirst:
@@ -427,7 +427,7 @@ export const stories: Story[] = [
     date: "2026-09-28",
     dateLabel: "September 28, 2026",
     image: IMAGES.storyFarming,
-    alt: "Farmland with terracing and hedgerows in low sun",
+    alt: "A Kenyan grower kneeling in onion rows in the green highlands",
     summary:
       "Sand dams and terraces built by local labour are keeping water on the landscape through the long dry season.",
     standfirst:
@@ -447,8 +447,8 @@ export const stories: Story[] = [
     author: "[Staff name]",
     date: "2026-09-21",
     dateLabel: "September 21, 2026",
-    image: IMAGES.storyPublicSpace,
-    alt: "Neighbours gathered around plans on a table in the street",
+    image: IMAGES.getInvolved,
+    alt: "Volunteers planting seedlings along a restored urban riverbank in Kenya",
     summary:
       "After the stone stopped moving, the trading centre bet on water, fishing and a river walk — and the first season brought back more visitors than jobs.",
     standfirst:
@@ -469,7 +469,7 @@ export const stories: Story[] = [
     date: "2026-09-02",
     dateLabel: "September 2, 2026",
     image: IMAGES.storyPublicSpace,
-    alt: "Residents reviewing plans for a public square in a Nairobi mtaa",
+    alt: "A Nairobi street market and public space at golden hour, with cyclists and families walking",
     summary:
       "Across Kenyan trading centres, strong civic participation is ensuring that local voices are reflected in the places they share.",
     standfirst:
@@ -511,7 +511,7 @@ export const stories: Story[] = [
     date: "2026-08-28",
     dateLabel: "August 28, 2026",
     image: IMAGES.storyHealth,
-    alt: "A community health worker speaking with a mother outside a rural clinic",
+    alt: "A community health worker weighing an infant while its mother waits at an outreach point",
     summary:
       "One van, one nurse, one church hall and a transport scheme turned out to be enough to restart antenatal attendance.",
     standfirst:
@@ -525,14 +525,14 @@ export const stories: Story[] = [
   },
   {
     slug: "farm-the-best",
-    title: "'Farm the best, conserve the rest'",
+    title: "A season of not planting the poor ground",
     category: "Water & Land",
     categoryHref: "/stories?area=water-land",
     author: "[Staff name]",
     date: "2026-08-11",
     dateLabel: "August 11, 2026",
-    image: IMAGES.storyFarming,
-    alt: "A Kenyan smallholder farmer kneeling in green onion rows",
+    image: IMAGES.aboutValues,
+    alt: "Growers potting hedgerow seedlings in a community nursery",
     summary:
       "A growers' association is proving that conservation is the difference between a resilient season and a ruined one.",
     standfirst:
@@ -983,7 +983,7 @@ export const ourWorkIntro = {
   intro:
     "We would rather change one thing in sixty wards than mention sixty things in none of them.",
   image: IMAGES.heroWatershed,
-  alt: "A dryland riverbed with new planting at first light",
+  alt: "A borehole and water point in a semi-arid Kenyan landscape",
   heading: "Strategy, then grants, then proof",
   body: [
     "Each programme page carries the same three things: the change we are buying, the organisations doing the work, and the figures we would publish if they were real.",

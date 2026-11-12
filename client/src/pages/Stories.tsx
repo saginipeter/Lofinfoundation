@@ -37,7 +37,7 @@ export default function Stories() {
         title="Reporting from the places we fund"
         intro="Written by staff and partners. Names, places and outcomes on this draft are placeholders — publish nothing about a real person without their consent."
         image={IMAGES.storyPublicSpace}
-        alt="Neighbours reviewing public-space plans on a street table"
+        alt="Residents moving through a Nairobi public space at golden hour"
       />
 
       <section className="bg-bone">

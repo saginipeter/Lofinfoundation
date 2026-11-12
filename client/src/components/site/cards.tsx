@@ -197,7 +197,7 @@ export function ProgramCard({ program, index }: { program: Program; index: numbe
         </p>
         <p className="mt-4 flex-1 text-[0.9375rem] leading-relaxed text-spruce/85">{program.summary}</p>
         <span className="mt-6 inline-flex items-center gap-2 text-[0.75rem] font-bold uppercase tracking-[0.14em] text-terracotta">
-          Explore program
+          Explore programme
           <ArrowRight className="size-3.5 transition-transform group-hover:translate-x-1" />
         </span>
       </div>
