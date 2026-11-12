@@ -149,7 +149,8 @@ forms), `--paper #EDF3FA` (text and reversed fills), `--ink #071A33` (text on go
 **Contrast, measured.** paper on navy 14.76, on navy-deep 16.39, on panel 13.53; mist `#A9C0DA`
 8.82; gold on navy 8.83; terracotta on navy 5.60; white on terracotta-deep 4.50 (AA, bold uppercase
 labels only); navy on gold 8.83. Header Donate and newsletter submit are gold with ink text, which
-keeps one accent for money actions.
+keeps one accent for money actions; the draft ribbon therefore moved to terracotta-deep with
+white text, so the warning reads as a warning and gold is not spent twice.
 
 **No em dashes in website copy.** 51 removed from the content file, pages, components, `const.ts`,
 `useAuth.ts` and `client/index.html`. Replacements are commas, colons, full stops or "to", so copy

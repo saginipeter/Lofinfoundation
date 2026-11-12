@@ -24,7 +24,7 @@ export function DraftRibbon() {
   if (dismissed) return null;
 
   return (
-    <div className="bg-gold text-ink print:hidden">
+    <div className="bg-terracotta-deep text-white print:hidden">
       <div className="container flex items-center justify-center gap-3 py-2 text-center text-[0.75rem] font-medium">
         <span>Preview draft. All copy, figures, names and photos on this site are placeholders.</span>
         <button
@@ -38,7 +38,7 @@ export function DraftRibbon() {
             }
             setDismissed(true);
           }}
-          className="shrink-0 rounded-full p-1 hover:bg-ink/15"
+          className="shrink-0 rounded-full p-1 hover:bg-white/15"
         >
           <X className="size-3.5" />
         </button>
