@@ -1,0 +1,14 @@
+{
+  "routes": [
+    { "path": "/", "title": "Home" },
+    { "path": "/about", "title": "About Us" },
+    { "path": "/our-work", "title": "Our Work" },
+    { "path": "/our-work/:slug", "title": "Program detail" },
+    { "path": "/impact", "title": "Impact" },
+    { "path": "/stories", "title": "Stories" },
+    { "path": "/stories/:slug", "title": "Story detail" },
+    { "path": "/get-involved", "title": "Get Involved" },
+    { "path": "/donate", "title": "Donate" },
+    { "path": "/contact", "title": "Contact" }
+  ]
+}
