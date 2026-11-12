@@ -109,3 +109,28 @@ stakeholder can see what is real and what still needs replacing.
 
 - Removed unreferenced starter demo files: `ComponentShowcase.tsx`, `Map.tsx`, `AIChatBox.tsx`,
   `DashboardLayout.tsx`, `DashboardLayoutSkeleton.tsx`.
+
+## Kenyan pass — delivered 2026-11-12 (checkpoints `c10543a`, `8c0723f`, `51086e5`)
+
+**Kenyan grounding.** Currency is Kenyan shillings through `currency`/`money()` in the content file;
+the donate ladder, presets, minimum-gift note and bank copy all read KSh. M-Pesa paybill and
+bank-transfer instruction panels added to `/donate`. Contact block moved to Nairobi with a `+254`
+number and East Africa Time. Registration lines read NGO Coordination Board number, KRA PIN and
+Public Benefits Organisation status. Programmes, stories and figures are placed in named counties;
+visible copy uses "programme". A Kiswahili strapline sits under the English one in the footer.
+
+**Photography.** Ten documentary photographs of Kenyan communities replaced the earlier set, and the
+African imagery is now the only imagery: no non-African photograph remains in the site, its content
+registry or the repository tree at `client/public/images/`. Filenames carry a `-ke` suffix so a
+cached copy of the superseded draft photography cannot appear under the same name. Each photograph
+is used once inside a list, so no two story cards repeat the same frame; the riverbank-planting image
+that had gone unused now carries the quarry-town river story, and the seedling nursery image carries
+the field-conservation story, whose American slogan title became "A season of not planting the poor
+ground". Alt text describes what each photograph actually shows.
+
+**Repository.** `README.md` replaces the starter notes with routes, commands, the single content
+file, image specifications, Kenyan framing, accessibility notes and a seven-point launch list. The
+site is pushed to https://github.com/saginipeter/Lofinfoundation (`main` at `51086e5`) using the
+session's GitHub connector without storing credentials or touching global git config; the pushed
+tree holds 180 files, the ten Kenyan photographs and no environment file. `pnpm check` and
+`pnpm build:static` both pass, and the static output carries the renamed images.
