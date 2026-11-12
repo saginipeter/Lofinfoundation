@@ -297,6 +297,9 @@ export function Footer() {
           <p className="mt-6 max-w-md font-display text-[1.375rem] leading-snug text-bone/85">
             {org.strapline}
           </p>
+          <p className="mt-2 max-w-md text-[0.9375rem] italic leading-snug text-gold/80">
+            {org.straplineSw}
+          </p>
           <div className="mt-8 flex flex-wrap gap-2">
             {org.socials.map((social) => (
               <a
@@ -344,9 +347,12 @@ export function Footer() {
 
       <div className="border-t border-bone/15">
         <div className="container flex flex-col gap-3 py-6 text-[0.75rem] text-bone/55 sm:flex-row sm:items-center sm:justify-between">
-          <p>
-            {new Date().getFullYear()} {org.name}. {org.registrationNote}
-          </p>
+          <div className="space-y-1">
+            <p>
+              {new Date().getFullYear()} {org.name}. {org.registrationNote}
+            </p>
+            <p className="text-bone/45">{org.taxNote}</p>
+          </div>
           <div className="flex gap-6">
             <Link href="/contact" className="hover:text-bone">
               Contact

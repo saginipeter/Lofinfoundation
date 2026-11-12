@@ -80,7 +80,7 @@ export default function Home() {
                 {programs.length}
               </p>
               <p className="mt-2 text-[0.8125rem] leading-snug text-spruce/85">
-                program areas, one defined geography
+                programme areas, one defined geography
               </p>
             </div>
           </Reveal>
@@ -92,7 +92,7 @@ export default function Home() {
         <div className="container py-20 lg:py-24">
           <SectionHeading id="programs-heading">Our Work</SectionHeading>
           <p className="mx-auto mt-5 max-w-2xl text-center text-[1.0625rem] leading-relaxed text-spruce/80">
-            Four program areas, chosen because a small patient grant in each one changes what a
+            Four programme areas, chosen because a small patient grant in each one changes what a
             community can do for itself.
           </p>
           <ul className="mt-14 grid list-none gap-6 p-0 sm:grid-cols-2 lg:grid-cols-4">

@@ -43,7 +43,7 @@ export default function NotFound() {
               That page has moved, or was never written
             </h1>
             <p className="mt-6 max-w-xl text-[1.0625rem] leading-relaxed text-spruce/80">
-              The story, program or report you asked for is not in this draft. Try the index of
+              The story, programme or report you asked for is not in this draft. Try the index of
               stories, or send us the link you expected to work and we will fix it.
             </p>
             <div className="mt-9 flex flex-wrap gap-3">

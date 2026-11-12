@@ -29,7 +29,7 @@ export default function Impact() {
         title="What we can prove, and what we cannot yet"
         intro="Every figure on this page is illustrative sample data. The structure is what matters: totals, allocation, outcomes against baseline, and the method behind each number."
         image={IMAGES.storyFarming}
-        alt="A grower kneeling in a cover-crop field"
+        alt="A Kenyan smallholder farmer kneeling in onion rows in the highlands"
       />
 
       <section aria-labelledby="totals-heading" className="bg-bone">
@@ -59,7 +59,7 @@ export default function Impact() {
           <Reveal>
             <Eyebrow>Where the money went</Eyebrow>
             <h2 id="allocation-heading" className="mt-4 text-[1.9rem] leading-tight sm:text-[2.25rem]">
-              Split by program area
+              Split by programme area
             </h2>
             <Prose className="mt-5">
               <p>

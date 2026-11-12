@@ -65,7 +65,7 @@ export default function About() {
         title="A foundation built to be useful before it is impressive"
         intro="Purpose, vision, values, the people accountable for the money, and how we got here."
         image={IMAGES.heroCommunity}
-        alt="A community meeting in a sunlit hall"
+        alt="A Kenyan community group meeting outdoors under an acacia tree"
       >
         <div className="mt-7">
           <PlaceholderNote>Organisation details below are placeholders</PlaceholderNote>
@@ -110,7 +110,7 @@ export default function About() {
           <Reveal delay={120} className="overflow-hidden bg-spruce-deep">
             <img
               src={IMAGES.aboutValues}
-              alt="A riverside town seen from above at first light"
+              alt="Kenyan growers potting tree seedlings in a community nursery"
               className="aspect-[4/3] size-full object-cover"
               loading="lazy"
             />
@@ -220,7 +220,7 @@ export default function About() {
             </div>
             <table className="mt-6 w-full border-collapse text-left">
               <caption className="sr-only">
-                Placeholder financial summary: expenditure, operating costs, endowment and auditor
+                Placeholder financial summary: expenditure, operating costs, funds held and auditor
               </caption>
               <tbody>
                 {financials.rows.map((row) => (

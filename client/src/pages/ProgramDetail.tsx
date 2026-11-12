@@ -130,7 +130,7 @@ export default function ProgramDetail() {
         <section className="border-t border-border bg-bone-deep">
           <div className="container py-20">
             <div className="flex flex-wrap items-end justify-between gap-4">
-              <Eyebrow>From this program</Eyebrow>
+              <Eyebrow>From this programme</Eyebrow>
               <Link
                 href="/stories"
                 className="text-[0.75rem] font-bold uppercase tracking-[0.14em] text-spruce hover:text-terracotta"
@@ -149,7 +149,7 @@ export default function ProgramDetail() {
 
       <SupportBand
         title={`Back ${program.name.toLowerCase()}`}
-        body="A single gift can be pointed at one of these four areas, or left to the program team to place where the need is sharpest."
+        body="A single gift can be pointed at one of these four areas, or left to the programme team to place where the need is sharpest."
       />
     </SitePage>
   );

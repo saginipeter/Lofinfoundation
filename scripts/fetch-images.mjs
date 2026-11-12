@@ -7,16 +7,17 @@ const API_URL = (process.env.MANUS_API_URL || "").replace(/\/+$/, "");
 const API_KEY = process.env.MANUS_API_KEY || "";
 
 const KEYS = {
-  "hero-community.webp": "async-images/VOdoEBjJ8GlDD1nuWyzGoO/image-1.webp",
-  "hero-watershed.webp": "async-images/VOdoEBjJ8GlDD1nuWyzGoO/image-2.webp",
-  "hero-learning.webp": "async-images/VOdoEBjJ8GlDD1nuWyzGoO/image-3.webp",
-  "story-public-space.webp": "async-images/VOdoEBjJ8GlDD1nuWyzGoO/image-4.webp",
-  "story-farming.webp": "async-images/VOdoEBjJ8GlDD1nuWyzGoO/image-5.webp",
-  "story-market.webp": "async-images/zY3XBTH3GK0aewlUpQtXTX/image-1.webp",
-  "story-health.webp": "async-images/zY3XBTH3GK0aewlUpQtXTX/image-2.webp",
-  "about-values.webp": "async-images/zY3XBTH3GK0aewlUpQtXTX/image-3.webp",
-  "get-involved.webp": "async-images/zY3XBTH3GK0aewlUpQtXTX/image-4.webp",
-  "story-youth.webp": "async-images/zY3XBTH3GK0aewlUpQtXTX/image-5.webp",
+  // Kenyan imagery, generated 2026-11-12 (two batches).
+  "hero-community.webp": "async-images/F5LYOyMXNPCc7UqsaUVNmi/image-1.webp",
+  "hero-watershed.webp": "async-images/F5LYOyMXNPCc7UqsaUVNmi/image-2.webp",
+  "hero-learning.webp": "async-images/F5LYOyMXNPCc7UqsaUVNmi/image-3.webp",
+  "about-values.webp": "async-images/F5LYOyMXNPCc7UqsaUVNmi/image-4.webp",
+  "get-involved.webp": "async-images/F5LYOyMXNPCc7UqsaUVNmi/image-5.webp",
+  "story-health.webp": "async-images/Zz1SOHVjo11JTmeSdWWLEN/image-1.webp",
+  "story-market.webp": "async-images/Zz1SOHVjo11JTmeSdWWLEN/image-2.webp",
+  "story-farming.webp": "async-images/Zz1SOHVjo11JTmeSdWWLEN/image-3.webp",
+  "story-youth.webp": "async-images/Zz1SOHVjo11JTmeSdWWLEN/image-4.webp",
+  "story-public-space.webp": "async-images/Zz1SOHVjo11JTmeSdWWLEN/image-5.webp",
 };
 
 const outDir = path.resolve(import.meta.dirname, "../client/public/images");

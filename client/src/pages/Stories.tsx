@@ -44,8 +44,8 @@ export default function Stories() {
         <div className="container py-14">
           <div className="flex flex-col gap-6 border-b border-border pb-6 lg:flex-row lg:items-end lg:justify-between">
             <div>
-              <Eyebrow>Filter by program area</Eyebrow>
-              <div className="mt-4 flex flex-wrap gap-2" role="group" aria-label="Filter stories by program area">
+              <Eyebrow>Filter by programme area</Eyebrow>
+              <div className="mt-4 flex flex-wrap gap-2" role="group" aria-label="Filter stories by programme area">
                 {[{ slug: "all", name: "All stories" }, ...programs].map((item) => (
                   <Link
                     key={item.slug}
