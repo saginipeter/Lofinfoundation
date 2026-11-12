@@ -120,3 +120,38 @@ npx --yes pnpm@10.18.0 install --frozen-lockfile && npx --yes pnpm@10.18.0 build
 5. Wire the enquiry and newsletter forms to a real mailbox and mailing-list tool.
 6. Complete the photograph consent checklist, including minors and sensitive locations.
 7. Remove the preview ribbon in `client/src/components/site/Chrome.tsx` once all of the above is done.
+
+## Putting it online on Vercel
+
+The repo is a monorepo with an Express server for Manus hosting and a static site for
+everyone else. Vercel must be told to build the static site, otherwise it publishes the
+server bundle and the browser shows JavaScript instead of the website.
+
+`vercel.json` at the repo root already does this:
+
+```
+buildCommand:      pnpm build:static
+outputDirectory:   dist/public
+installCommand:    pnpm install --frozen-lockfile
+rewrites:          /(.*) -> /index.html
+framework:         vite
+```
+
+To deploy:
+
+1. Import `saginipeter/Lofinfoundation` into Vercel.
+2. Leave Root Directory at the repo root, framework Vite, and let Vercel read
+   `vercel.json`. If you previously set Build Command or Output Directory in the
+   dashboard, clear them or match the values above, dashboard settings win over the file.
+3. Deploy. Every push to `main` redeploys.
+
+Check it worked: the home page renders, and reloading `/donate` or `/stories` still shows
+the site rather than 404. If you see a page of JavaScript, the Output Directory is `dist`
+instead of `dist/public`.
+
+## Putting it online anywhere else
+
+`pnpm build:static` writes the finished site to `dist/public`. Upload the contents of that
+folder to any host: cPanel, Hostinger, Netlify, Cloudflare Pages, S3, Nginx. Add the one
+fallback rule so deep links work, `.htaccess`, `_redirects` and `vercel.json` in the built
+package already cover the common hosts.
