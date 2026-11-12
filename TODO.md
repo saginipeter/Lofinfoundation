@@ -90,8 +90,9 @@ stakeholder can see what is real and what still needs replacing.
 - Ten generated photographs are committed as local assets in `client/public/images` (managed
   `/manus-storage/` URLs are not reachable from the static dev server or a static publish);
   `scripts/fetch-images.mjs` re-downloads them if new images are generated.
-- Route table and `client/public/manus-routes.json` match; `pnpm check` (tsc) clean; browser
-  console clean; static production build succeeds; all ten routes verified serving.
+- Route table and `client/public/manus-routes.json` match (`/404` is deliberately left out of the
+  manifest because 404-only routes are excluded); `pnpm check` (tsc) clean; browser console clean;
+  static production build succeeds; all ten routes verified serving.
 - Project logo generated from the wordmark and registered in `app.config.ts`.
 
 ## Still open
