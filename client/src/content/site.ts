@@ -13,16 +13,16 @@
  */
 
 export const IMAGES = {
-  heroCommunity: "/images/hero-community.webp",
-  heroWatershed: "/images/hero-watershed.webp",
-  heroLearning: "/images/hero-learning.webp",
-  storyPublicSpace: "/images/story-public-space.webp",
-  storyFarming: "/images/story-farming.webp",
-  storyMarket: "/images/story-market.webp",
-  storyHealth: "/images/story-health.webp",
-  aboutValues: "/images/about-values.webp",
-  getInvolved: "/images/get-involved.webp",
-  storyYouth: "/images/story-youth.webp",
+  heroCommunity: "/images/hero-community-ke.webp",
+  heroWatershed: "/images/hero-watershed-ke.webp",
+  heroLearning: "/images/hero-learning-ke.webp",
+  storyPublicSpace: "/images/story-public-space-ke.webp",
+  storyFarming: "/images/story-farming-ke.webp",
+  storyMarket: "/images/story-market-ke.webp",
+  storyHealth: "/images/story-health-ke.webp",
+  aboutValues: "/images/about-values-ke.webp",
+  getInvolved: "/images/get-involved-ke.webp",
+  storyYouth: "/images/story-youth-ke.webp",
 } as const;
 
 /** Money is Kenyan shillings everywhere on this site. */
